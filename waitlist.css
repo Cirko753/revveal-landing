@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #222531;
+  color: #f0eeff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  color: #fff;
+}
+
+.back {
+  color: #8b89a8;
+  text-decoration: none;
+}
+
+/* CARD */
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #252741;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(108,99,255,0.2);
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #8b89a8;
+  margin-bottom: 25px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  text-align: left;
+  font-size: 0.85rem;
+  color: #8b89a8;
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(108,99,255,0.25);
+  background: #1c1d2a;
+  color: #fff;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #6c63ff, #a78bfa);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* SUCCESS */
+.success {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #6c63ff, #a78bfa);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* HINT */
+.hint {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #8b89a8;
+}
