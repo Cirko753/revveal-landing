@@ -1,0 +1,37 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --card-bg: #252741; --bg-color: #222531; --sb-bg: #0c0b15;
+      --accent: #6c63ff; --accent-2: #a78bfa;
+      --border: rgba(108, 99, 255, 0.18);
+      --text: #f0eeff; --text-muted: #8b89a8;
+      --font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif;
+    }
+    body { background: var(--bg-color); color: var(--text); font-family: var(--font-body); line-height: 1.7; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 5%; height: 72px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(12,11,21,0.7); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--font-display); font-size: 1.5rem; font-weight: 800;
+      background: linear-gradient(135deg, #fff 30%, var(--accent-2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .back { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .back:hover { color: var(--text); }
+    main { max-width: 720px; margin: 0 auto; padding: 120px 5% 80px; }
+    .page-label {
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em;
+      color: var(--accent-2); font-weight: 600; margin-bottom: 1rem;
+    }
+    h1 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+    .date { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 3rem; }
+    h2 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin: 2.5rem 0 0.8rem; color: var(--text); }
+    p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; font-weight: 300; }
+    ul { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; padding-left: 1.5rem; font-weight: 300; }
+    li { margin-bottom: 0.4rem; }
+    a { color: var(--accent-2); }
+    footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.8rem; border-top: 1px solid var(--border); }
