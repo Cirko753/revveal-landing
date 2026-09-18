@@ -140,18 +140,56 @@ a { color: inherit; }
 }
 
 /* ── Marque ─────────────────────────────────────────────────
-   Le "vv" en violet reprend exactement le wordmark de la
-   SideBar de l'app (.revvealV). Pas de texte en degrade : un
-   degrade sur quatre lettres se lit comme un template.         */
-.wordmark {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: -0.035em;
-  color: var(--text);
+   Monogramme + nom, et non le nom seul. Le wordmark seul a
+   20px flottait dans une barre de 64px : il n'avait ni masse
+   ni point d'ancrage a gauche, d'ou l'impression qu'il avait
+   ete pose la en attendant. Le monogramme donne le bloc
+   visuel, le nom passe a 24px.
+
+   Le "vv" reste en accent : la marque EST le "vv" de Revveal,
+   donc l'echo entre les deux est le concept, pas une
+   redondance. Toujours pas de texte en degrade — un degrade
+   sur quatre lettres se lit comme un gabarit.                */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   text-decoration: none;
   white-space: nowrap;
 }
-.wordmark i { color: var(--accent); font-style: normal; }
+
+/* 22px, pas 25 : le dessin n'occupe que 80 % de la boite (y 4.5
+   a 30 sur 32), donc un carre de 25px donnait une marque de 20px
+   de haut face a une hauteur de capitale de 12,7px — une fois et
+   demie trop grande, et le bloc penchait du cote du symbole.
+   A 22px le trace fait 17,5px, soit environ 1,35 fois la
+   capitale : la marque domine sans ecraser.
+
+   Le margin-top redescend le symbole de 1px. L'alignement des
+   boites par align-items:center ne suffit pas ici : la boite du
+   texte inclut ascendantes et descendantes, si bien que le centre
+   des capitales tombe 1,5px plus bas que le centre de la ligne. */
+.brand-mark {
+  width: 22px;
+  height: 22px;
+  margin-top: 1.5px;
+  color: var(--accent);
+  transition: color 0.18s ease;
+}
+.brand:hover .brand-mark { color: hsl(253 100% 72%); }
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  color: var(--text);
+}
+.brand-name i { color: var(--accent); font-style: normal; }
+
+/* Dans le pied de page la marque n'est plus un element de
+   navigation mais une signature : meme dessin, un cran plus bas. */
+.footer-brand .brand-mark { width: 20px; height: 20px; margin-top: 1px; }
+.footer-brand .brand-name { font-size: 1.3125rem; }
 
 /* ── Navigation ─────────────────────────────────────────────── */
 .nav {
@@ -181,7 +219,7 @@ a { color: inherit; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
   list-style: none;
 }
 .nav-links a {
@@ -211,6 +249,9 @@ a { color: inherit; }
   border: 1px solid transparent;
   border-radius: 10px;
   padding: 0.7rem 1.35rem;
+  /* Un bouton ne se coupe pas en deux lignes : il deborderait de la
+     barre de navigation, qui a une hauteur fixe de 64px. */
+  white-space: nowrap;
   cursor: pointer;
   transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
@@ -322,6 +363,18 @@ a { color: inherit; }
 
 @media (max-width: 720px) {
   .nav-links { display: none; }
+}
+
+/* Sous 560px il ne reste que la marque et l'appel a l'action, et il
+   faut encore leur faire de la place : « Contact » disparait (il est
+   dans le pied de page et dans chaque page legale) et le bloc de
+   marque redescend d'un cran. Sans cela le bouton passait sur deux
+   lignes et sortait de la barre. */
+@media (max-width: 560px) {
+  .nav-mail { display: none; }
+  .brand { gap: 0.4rem; }
+  .brand-mark { width: 20px; height: 20px; margin-top: 1px; }
+  .brand-name { font-size: 1.3125rem; }
 }
 
 @media (max-width: 520px) {

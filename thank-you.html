@@ -7,6 +7,8 @@
   <meta name="theme-color" content="#1e2029" />
   <meta name="robots" content="noindex" />
 
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -18,6 +20,14 @@
 <body class="wl-body">
 
 <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <!-- Monogramme : un V evide dans un V plein — les deux « v » de Revveal,
+       emboites l'un au-dessus de l'autre. Le creux est un trou (fill-rule
+       evenodd) et non un aplat couleur de fond : la marque doit tenir aussi
+       bien sur --bg que sur le --bg-deep du pied de page. -->
+  <symbol id="i-logo" viewBox="0 0 32 32">
+    <path fill="currentColor" fill-rule="evenodd"
+          d="M1.5 4.5 H9.5 L16 16.2 L22.5 4.5 H30.5 L16 30 Z M11.6 4.5 H20.4 L16 12.4 Z"/>
+  </symbol>
   <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4.5 12.5 9.5 17.5 19.5 6.5" />
   </symbol>
@@ -28,7 +38,10 @@
 
 <header class="nav is-scrolled">
   <div class="wrap legal-nav">
-    <a href="./index.html" class="wordmark">Re<i>vv</i>eal</a>
+    <a href="./index.html" class="brand" aria-label="Revveal, back to home">
+      <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
+      <span class="brand-name">Re<i>vv</i>eal</span>
+    </a>
   </div>
 </header>
 
