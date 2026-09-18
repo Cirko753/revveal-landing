@@ -181,20 +181,6 @@
 .legal-note p { font-size: 0.875rem; margin: 0; }
 .legal-note p + p { margin-top: 0.6rem; }
 
-/* Reserve pour les mentions encore incompletes (l'adresse du
-   siege). Visible plutot que discrete : un blanc dans des
-   mentions legales doit sauter aux yeux tant qu'il est la. */
-.legal-todo {
-  display: inline-block;
-  font-family: var(--mono);
-  font-size: 0.8125rem;
-  color: var(--warn);
-  background: hsl(36 80% 53% / 0.12);
-  border: 1px dashed hsl(36 80% 53% / 0.4);
-  border-radius: 6px;
-  padding: 0.05rem 0.45rem;
-}
-
 .legal-table {
   width: 100%;
   border-collapse: collapse;

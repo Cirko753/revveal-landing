@@ -117,6 +117,21 @@
    avant meme d'avoir ete rempli, a la premiere ouverture. */
 .wl-input:user-invalid { border-color: hsl(0 60% 55% / 0.7); }
 
+/* Champ piege du formulaire. Sorti du flux par position absolue plutot
+   que par display:none ou visibility:hidden : les robots un peu soignes
+   ignorent justement les champs masques de cette facon, et le piege ne
+   prendrait plus rien. Ici le champ existe, est focusable techniquement,
+   mais se trouve hors de l'ecran. tabindex="-1" et aria-hidden dans le
+   HTML le retirent du parcours clavier et des lecteurs d'ecran, pour
+   qu'aucun humain ne puisse le remplir par accident. */
+.wl-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .wl-error {
   font-size: 0.8125rem;
   line-height: 1.55;
