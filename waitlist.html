@@ -2,42 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Join Waitlist — Revveal</title>
-
-  <link rel="stylesheet" href="./waitlist.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join the waitlist — Revveal</title>
+  <meta name="description" content="Be told once, when Revveal opens, with the free campaign ready on your account." />
+  <meta name="theme-color" content="#1e2029" />
+  <meta name="robots" content="noindex" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./waitlist.css" />
 </head>
 
-<body>
+<body class="wl-body">
 
-  <nav>
-    <a href="/" class="logo">Revveal</a>
-    <a href="/" class="back">← Back to home</a>
-  </nav>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 12H6" /><path d="M11 6.5 5.5 12 11 17.5" />
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 12.5 9.5 17.5 19.5 6.5" />
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h13" /><path d="M13 6.5 18.5 12 13 17.5" />
+  </symbol>
+</svg>
 
-  <main>
-    <div class="card">
+<header class="nav is-scrolled">
+  <div class="wrap legal-nav">
+    <a href="./index.html" class="wordmark">Re<i>vv</i>eal</a>
+    <a href="./index.html" class="legal-back">
+      <svg><use href="#i-back" /></svg>
+      Back to home
+    </a>
+  </div>
+</header>
 
-      <h1>Join the waitlist</h1>
-      <p>Be the first to access Revveal when we launch.</p>
+<main class="wl-main">
+  <div class="wrap wl-grid">
 
-      <form action="/thank-you.html" method="GET">
-        <label>Email address</label>
-        <input type="email" name="email" placeholder="you@company.com" required />
+    <section class="wl-copy">
+      <span class="eyebrow">Launching soon</span>
+      <h1>One email, when it opens.</h1>
+      <p class="lede">
+        Revveal is not public yet. Leave your address and we will write once —
+        at launch — with the free campaign already available on your account.
+      </p>
 
-        <button type="submit">Join waitlist</button>
+      <ul class="wl-points">
+        <li>
+          <svg width="15" height="15"><use href="#i-check" /></svg>
+          <span><b>15 creators found and 5 detailed analyses</b>, free, on your first campaign. No card.</span>
+        </li>
+        <li>
+          <svg width="15" height="15"><use href="#i-check" /></svg>
+          <span>One message at launch. No newsletter, no drip sequence, no sales call.</span>
+        </li>
+        <li>
+          <svg width="15" height="15"><use href="#i-check" /></svg>
+          <span>Your address is stored for nothing else, and deleted the moment you ask.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="wl-form-wrap">
+      <form class="wl-card" id="wl-form" novalidate>
+        <h2>Join the waitlist</h2>
+
+        <label class="wl-label" for="email">Email address</label>
+        <input
+          class="wl-input"
+          id="email"
+          name="email"
+          type="email"
+          inputmode="email"
+          autocomplete="email"
+          placeholder="you@company.com"
+          required
+        />
+
+        <p class="wl-error" id="wl-error" role="alert" hidden></p>
+
+        <button class="btn btn--primary btn--block btn--lg" type="submit" id="wl-submit">
+          Join the waitlist
+          <svg class="arrow" width="16" height="16"><use href="#i-arrow" /></svg>
+        </button>
+
+        <p class="wl-fine">
+          By joining you accept the <a href="./terms.html#s2">Terms</a> and the
+          <a href="./privacy.html#s2">Privacy Policy</a>. Removal on request,
+          no questions asked.
+        </p>
       </form>
+    </section>
 
-      <div class="hint">
-        No spam. Only product updates.
-      </div>
+  </div>
+</main>
 
+<footer class="footer wl-footer">
+  <div class="wrap">
+    <div class="footer-base" style="border-top:0; padding-top:0;">
+      <span>© <span id="year">2026</span> Revveal · <a href="./terms.html">Terms</a> · <a href="./privacy.html">Privacy</a></span>
+      <span class="mono">contact@revveal.net</span>
     </div>
-  </main>
+  </div>
+</footer>
+
+<script>
+  /* ------------------------------------------------------------------
+     OU PARTENT LES ADRESSES
+
+     Renseigner WAITLIST_ENDPOINT avec une URL qui accepte un POST JSON
+     { "email": "..." } — Formspree, Tally, Buttondown, une Edge
+     Function Supabase, ce que vous voulez.
+
+     Tant que la constante est vide, le formulaire ne fait PAS semblant
+     d'avoir enregistre l'adresse : il affiche l'adresse de contact.
+     L'ancienne version envoyait le formulaire en GET vers
+     thank-you.html, ce qui (1) ne stockait rien nulle part — chaque
+     inscription etait perdue — et (2) faisait apparaitre l'adresse du
+     visiteur dans l'URL, donc dans son historique et dans les journaux
+     du serveur.
+  ------------------------------------------------------------------ */
+  const WAITLIST_ENDPOINT = '';
+
+  const form    = document.getElementById('wl-form');
+  const input   = document.getElementById('email');
+  const submit  = document.getElementById('wl-submit');
+  const errorEl = document.getElementById('wl-error');
+
+  function showError(html) {
+    errorEl.innerHTML = html;
+    errorEl.hidden = false;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorEl.hidden = true;
+
+    const email = input.value.trim();
+    if (!email || !input.checkValidity()) {
+      showError('Enter a valid email address.');
+      input.focus();
+      return;
+    }
+
+    if (!WAITLIST_ENDPOINT) {
+      showError(
+        'The waitlist form is not connected yet — write to ' +
+        '<a href="mailto:contact@revveal.net?subject=Waitlist">contact@revveal.net</a> ' +
+        'and you will be added by hand.'
+      );
+      return;
+    }
+
+    submit.disabled = true;
+    submit.textContent = 'Adding you…';
+
+    try {
+      const res = await fetch(WAITLIST_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (!res.ok) throw new Error(res.status);
+      // Redirection sans parametre : l'adresse ne doit pas transiter
+      // par l'URL de la page de confirmation.
+      location.href = './thank-you.html';
+    } catch {
+      submit.disabled = false;
+      submit.textContent = 'Join the waitlist';
+      showError(
+        'Something went wrong on our side. Try again, or write to ' +
+        '<a href="mailto:contact@revveal.net?subject=Waitlist">contact@revveal.net</a>.'
+      );
+    }
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>

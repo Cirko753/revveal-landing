@@ -1,118 +1,191 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ============================================================
+   waitlist.css — inscription et confirmation
+   ------------------------------------------------------------
+   Reprend .nav, .legal-nav et .legal-back de base.css / legal.css
+   pour la barre du haut ; seules les regles propres a ces deux
+   pages vivent ici.
+   ============================================================ */
 
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: #222531;
-  color: #f0eeff;
-  display: flex;
+/* La barre de navigation reduite est partagee avec les pages
+   legales : on redefinit ici les deux seules classes qui en
+   viennent, pour que waitlist.html n'ait pas a charger
+   legal.css entier. */
+.legal-nav { justify-content: space-between; }
+.legal-back {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+  color: var(--text-3);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+.legal-back:hover { color: var(--text); }
+.legal-back svg { width: 15px; height: 15px; transition: transform 0.18s ease; }
+.legal-back:hover svg { transform: translateX(-2px); }
+
+/* Page courte : on colle le pied en bas plutot que de le laisser
+   remonter au milieu de l'ecran sur un grand moniteur. */
+.wl-body {
   min-height: 100vh;
-}
-
-/* NAV */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  text-decoration: none;
-  color: #fff;
-}
-
-.back {
-  color: #8b89a8;
-  text-decoration: none;
-}
-
-/* CARD */
-.card {
-  width: 100%;
-  max-width: 420px;
-  background: #252741;
-  padding: 40px;
-  border-radius: 16px;
-  border: 1px solid rgba(108,99,255,0.2);
-  text-align: center;
-}
-
-h1 {
-  font-family: 'Syne', sans-serif;
-  margin-bottom: 10px;
-}
-
-p {
-  color: #8b89a8;
-  margin-bottom: 25px;
-}
-
-/* FORM */
-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+}
+.wl-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: calc(64px + 3.5rem) 0 4rem;
+  overflow: hidden;
+}
+.wl-main::before {
+  content: '';
+  position: absolute;
+  inset: -30% -10% auto -10%;
+  height: 120%;
+  background: radial-gradient(45% 45% at 25% 15%, hsl(253 100% 66% / 0.12), transparent 70%);
+  pointer-events: none;
+}
+.wl-main > .wrap { position: relative; }
+
+.wl-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
 }
 
-label {
-  text-align: left;
-  font-size: 0.85rem;
-  color: #8b89a8;
+/* ── Colonne de gauche ──────────────────────────────────────── */
+.wl-copy .eyebrow { margin-bottom: 1.25rem; }
+.wl-copy h1 { font-size: clamp(2.1rem, 4.5vw, 3.2rem); margin-bottom: 1.25rem; }
+.wl-copy .lede { margin-bottom: 2.25rem; }
+
+.wl-points { list-style: none; display: grid; gap: 1rem; }
+.wl-points li {
+  display: grid;
+  grid-template-columns: 15px 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-3);
+}
+.wl-points svg { color: var(--accent-soft); margin-top: 4px; }
+.wl-points b { color: var(--text-2); font-weight: 600; }
+
+/* ── Carte du formulaire ────────────────────────────────────── */
+.wl-card {
+  background: var(--surface-sunk);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.15rem);
+  box-shadow: 0 32px 64px -28px rgb(0 0 0 / 0.6);
+}
+.wl-card h2 { font-size: 1.25rem; margin-bottom: 1.5rem; }
+
+.wl-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 0.55rem;
 }
 
-input {
-  padding: 12px;
+.wl-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  color: var(--text);
+  background: hsl(0 0% 0% / 0.25);
+  border: 1px solid var(--line-strong);
   border-radius: 10px;
-  border: 1px solid rgba(108,99,255,0.25);
-  background: #1c1d2a;
-  color: #fff;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+.wl-input::placeholder { color: hsl(230 9% 45%); }
+.wl-input:hover { border-color: hsl(0 0% 100% / 0.24); }
+.wl-input:focus {
   outline: none;
+  border-color: var(--accent);
+  background: hsl(0 0% 0% / 0.35);
 }
+/* :user-invalid plutot que :invalid — sinon le champ est rouge
+   avant meme d'avoir ete rempli, a la premiere ouverture. */
+.wl-input:user-invalid { border-color: hsl(0 60% 55% / 0.7); }
 
-button {
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  background: linear-gradient(135deg, #6c63ff, #a78bfa);
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 5px;
+.wl-error {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: hsl(36 80% 63%);
+  background: hsl(36 80% 53% / 0.1);
+  border: 1px solid hsl(36 80% 53% / 0.3);
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 1rem;
 }
+.wl-error a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 
-button:hover {
-  opacity: 0.9;
-}
-
-/* SUCCESS */
-.success {
+.wl-fine {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--text-3);
   text-align: center;
 }
+.wl-fine a { color: var(--text-2); text-decoration: underline; text-underline-offset: 3px; }
+.wl-fine a:hover { color: var(--text); }
 
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 18px;
-  background: linear-gradient(135deg, #6c63ff, #a78bfa);
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
+/* ── Confirmation ───────────────────────────────────────────── */
+.wl-main--center { justify-content: center; text-align: center; }
+
+.wl-done { max-width: 34rem; margin-inline: auto; }
+.wl-done-mark {
+  display: grid;
+  place-items: center;
+  width: 52px; height: 52px;
+  margin: 0 auto 1.75rem;
+  border-radius: 50%;
+  color: var(--accent-soft);
+  background: var(--accent-wash);
+  border: 1px solid var(--accent-line);
+}
+.wl-done h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin-bottom: 1rem; }
+.wl-done p {
+  color: var(--text-2);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.wl-done-sub {
+  margin-top: 1rem;
+  font-size: 0.875rem !important;
+  color: var(--text-3) !important;
+}
+.wl-done-sub a { color: var(--accent-soft); text-decoration: underline; text-underline-offset: 3px; }
+
+.wl-done-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-top: 2.25rem;
 }
 
-/* HINT */
-.hint {
-  margin-top: 15px;
-  font-size: 0.8rem;
-  color: #8b89a8;
+.wl-footer { background: transparent; border-top: 1px solid var(--line); padding: 1.5rem 0; }
+.wl-footer a { color: inherit; text-decoration: none; }
+.wl-footer a:hover { color: var(--text-2); }
+
+/* ── Adaptatif ──────────────────────────────────────────────── */
+@media (max-width: 880px) {
+  .wl-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .wl-main { padding-top: calc(64px + 2.5rem); align-items: flex-start; }
+}
+
+@media (max-width: 520px) {
+  .wl-done-actions { flex-direction: column; align-items: stretch; }
+  .wl-done-actions .btn { width: 100%; }
 }

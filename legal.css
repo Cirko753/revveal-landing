@@ -1,0 +1,257 @@
+/* ============================================================
+   legal.css — CGU et politique de confidentialite
+   ------------------------------------------------------------
+   Une seule feuille pour les deux documents. terms.css et
+   privacy.css etaient deux copies du meme fichier, l'une mise
+   en forme et l'autre compactee ; toute correction devait etre
+   faite deux fois, et ne l'etait pas.
+
+   Reprend la typographie de base.css. Un document juridique se
+   lit, il ne se parcourt pas : mesure courte, interligne large,
+   hierarchie portee par la numerotation plutot que par la
+   couleur.
+   ============================================================ */
+
+.legal-nav { justify-content: space-between; }
+
+.legal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+  color: var(--text-3);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+.legal-back:hover { color: var(--text); }
+.legal-back svg { width: 15px; height: 15px; transition: transform 0.18s ease; }
+.legal-back:hover svg { transform: translateX(-2px); }
+
+/* ── En-tete ────────────────────────────────────────────────── */
+.legal-head {
+  padding: calc(64px + 4rem) 0 2.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.legal-head .eyebrow { margin-bottom: 1.1rem; }
+.legal-head h1 { font-size: clamp(2rem, 4.5vw, 2.9rem); margin-bottom: 1rem; }
+
+.legal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-3);
+}
+.legal-meta a { color: var(--accent-soft); text-decoration: none; }
+.legal-meta a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Bascule CGU / confidentialite. Les deux documents sont lies :
+   un lecteur arrive sur l'un cherche souvent l'autre, et l'app
+   elle-meme les presente sous deux onglets. */
+.legal-switch {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 1.75rem;
+  padding: 0.3rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  width: max-content;
+  max-width: 100%;
+}
+.legal-switch a {
+  padding: 0.45rem 0.95rem;
+  border-radius: 7px;
+  font-size: 0.8125rem;
+  color: var(--text-3);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.legal-switch a:hover { color: var(--text); }
+.legal-switch a[aria-current="page"] {
+  background: var(--accent-wash);
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px var(--accent-line);
+}
+
+/* ── Corps ──────────────────────────────────────────────────── */
+.legal-body {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 4.5rem);
+  /* padding-block et non le raccourci `padding` : .legal-body porte
+     aussi la classe .wrap, dont le padding-inline serait remis a
+     zero par un raccourci — le sommaire sortait alors de la
+     gouttiere et se collait au bord gauche de la fenetre. */
+  padding-block: 3.5rem 5rem;
+  align-items: start;
+}
+
+/* Sommaire colle en haut : ces documents font une dizaine de
+   sections, et la seule facon de retrouver « remboursement » ou
+   « vos droits » dans l'ancienne version etait de derouler. */
+.legal-toc {
+  position: sticky;
+  top: calc(64px + 1.5rem);
+}
+.legal-toc h2 {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+}
+.legal-toc ol { list-style: none; display: grid; gap: 0.1rem; counter-reset: toc; }
+.legal-toc a {
+  display: block;
+  padding: 0.3rem 0 0.3rem 0.85rem;
+  border-left: 1px solid var(--line);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--text-3);
+  text-decoration: none;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.legal-toc a:hover { color: var(--text); border-left-color: var(--accent); }
+
+.legal-article { max-width: 68ch; }
+
+.legal-article > p,
+.legal-article > ul,
+.legal-article > ol { margin-bottom: 1.15rem; }
+
+.legal-article p,
+.legal-article li {
+  color: var(--text-2);
+  font-size: 0.9375rem;
+  line-height: 1.78;
+}
+.legal-article strong { color: var(--text); font-weight: 600; }
+
+.legal-article h2 {
+  font-size: 1.1875rem;
+  letter-spacing: -0.02em;
+  margin: 3rem 0 0.9rem;
+  scroll-margin-top: calc(64px + 1.5rem);
+}
+.legal-article h2:first-of-type { margin-top: 2rem; }
+
+/* Numero en mono, en retrait dans la gouttiere quand la place
+   existe : le titre reste aligne sur le texte, la numerotation
+   se lit comme un reperage et non comme une partie de la phrase. */
+.legal-article h2 .n {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--accent-soft);
+  margin-right: 0.6rem;
+}
+
+.legal-article h3 {
+  font-size: 0.9375rem;
+  margin: 1.75rem 0 0.6rem;
+  color: var(--text);
+}
+
+.legal-article ul, .legal-article ol { padding-left: 1.15rem; }
+.legal-article li { margin-bottom: 0.5rem; }
+.legal-article li::marker { color: var(--text-3); }
+
+.legal-article a {
+  color: var(--accent-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* Encadre : un point que le lecteur a interet a ne pas manquer
+   (remboursement, suppression de compte, retrait d'un createur).
+   Filet a gauche plutot que fond colore, pour ne pas transformer
+   le document en suite de bandeaux. */
+.legal-note {
+  margin: 1.5rem 0 1.75rem;
+  padding: 0.95rem 1.1rem;
+  border-left: 2px solid var(--accent);
+  background: hsl(0 0% 100% / 0.025);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.legal-note p { font-size: 0.875rem; margin: 0; }
+.legal-note p + p { margin-top: 0.6rem; }
+
+/* Reserve pour les mentions encore incompletes (l'adresse du
+   siege). Visible plutot que discrete : un blanc dans des
+   mentions legales doit sauter aux yeux tant qu'il est la. */
+.legal-todo {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  color: var(--warn);
+  background: hsl(36 80% 53% / 0.12);
+  border: 1px dashed hsl(36 80% 53% / 0.4);
+  border-radius: 6px;
+  padding: 0.05rem 0.45rem;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0 1.75rem;
+  font-size: 0.875rem;
+}
+.legal-table th,
+.legal-table td {
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  vertical-align: top;
+}
+.legal-table th {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  background: hsl(0 0% 100% / 0.025);
+}
+.legal-table td { color: var(--text-2); line-height: 1.6; }
+.legal-table td:first-child { color: var(--text); white-space: nowrap; }
+
+.legal-end {
+  margin-top: 3.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.8125rem;
+  color: var(--text-3);
+}
+
+/* ── Adaptatif ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .legal-body { grid-template-columns: 1fr; gap: 2.5rem; padding-block-start: 2.5rem; }
+  .legal-toc { position: static; }
+  .legal-toc ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .legal-toc a {
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 0.28rem 0.7rem;
+  }
+  .legal-toc a:hover { border-color: var(--accent-line); }
+}
+
+@media (max-width: 560px) {
+  .legal-head { padding-top: calc(64px + 2.5rem); }
+  .legal-switch { width: 100%; }
+  .legal-switch a { flex: 1; text-align: center; }
+  .legal-table, .legal-table tbody, .legal-table tr, .legal-table td { display: block; width: 100%; }
+  .legal-table thead { display: none; }
+  .legal-table tr { margin-bottom: 0.75rem; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .legal-table td { border: 0; border-top: 1px solid var(--line); }
+  .legal-table td:first-child { border-top: 0; font-weight: 600; }
+}

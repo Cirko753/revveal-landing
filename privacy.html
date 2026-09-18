@@ -2,79 +2,347 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — Revveal</title>
-  <link rel="stylesheet" href="./privacy.css">
+  <meta name="description" content="How Revveal handles personal data — for users of the service and for the TikTok creators whose public data appears in it." />
+  <meta name="theme-color" content="#1e2029" />
+  <meta name="robots" content="index, follow" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./legal.css" />
 </head>
+
 <body>
-  <nav>
-    <a href="/" class="nav-logo">Revveal</a>
-    <a href="/" class="back">← Back to home</a>
-  </nav>
-  <main>
-    <div class="page-label">Legal</div>
-    <h1>Privacy Policy</h1>
-    <p class="date">Last updated: June 1, 2025</p>
 
-    <p>At Revveal ("we", "our", "us"), we are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our platform at <a href="https://revveal.net">revveal.net</a>.</p>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 12H6" /><path d="M11 6.5 5.5 12 11 17.5" />
+  </symbol>
+</svg>
 
-    <h2>1. Information We Collect</h2>
-    <p>We collect information you provide directly to us, such as when you create an account, request early access, or contact us:</p>
-    <ul>
-      <li>Name and email address</li>
-      <li>Company name and role</li>
-      <li>Billing information (processed securely via third-party payment providers)</li>
-      <li>Any communications you send us</li>
-    </ul>
-    <p>We also collect certain information automatically when you use our service, including IP address, browser type, pages visited, and usage patterns.</p>
+<header class="nav is-scrolled">
+  <div class="wrap legal-nav">
+    <a href="./index.html" class="wordmark">Re<i>vv</i>eal</a>
+    <a href="./index.html" class="legal-back">
+      <svg><use href="#i-back" /></svg>
+      Back to home
+    </a>
+  </div>
+</header>
 
-    <h2>2. How We Use Your Information</h2>
-    <p>We use the information we collect to:</p>
-    <ul>
-      <li>Provide, maintain and improve our platform</li>
-      <li>Process transactions and send related information</li>
-      <li>Send you technical notices, updates and support messages</li>
-      <li>Respond to your comments and questions</li>
-      <li>Monitor and analyze usage patterns to improve user experience</li>
-    </ul>
+<main>
 
-    <h2>3. TikTok Data</h2>
-    <p>Revveal accesses publicly available TikTok creator data through the TikTok Research API. This data is used exclusively to power analytics features within our platform. We do not sell, redistribute or expose raw TikTok API data. All TikTok data displayed in our platform is processed and presented in the form of aggregated insights and analytics dashboards.</p>
+  <div class="legal-head">
+    <div class="wrap">
+      <span class="eyebrow">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="legal-meta">
+        <span>Last updated: 18 September 2026</span>
+        <span>Questions: <a href="mailto:contact@revveal.net">contact@revveal.net</a></span>
+      </p>
 
-    <h2>4. Data Sharing</h2>
-    <p>We do not sell your personal data. We may share your information with third-party service providers who assist us in operating our platform (such as hosting, analytics, and payment processing), subject to confidentiality agreements.</p>
+      <nav class="legal-switch" aria-label="Legal documents">
+        <a href="./terms.html">Terms of Service</a>
+        <a href="./privacy.html" aria-current="page">Privacy Policy</a>
+      </nav>
+    </div>
+  </div>
 
-    <h2>5. Data Retention</h2>
-    <p>We retain your personal data for as long as your account is active or as needed to provide our services. You may request deletion of your account and associated data at any time by contacting us at <a href="mailto:contact@revveal.net">contact@revveal.net</a>.</p>
+  <div class="wrap legal-body">
 
-    <h2>6. Your Rights (GDPR)</h2>
-    <p>If you are located in the European Union, you have the following rights regarding your personal data:</p>
-    <ul>
-      <li>Right to access your personal data</li>
-      <li>Right to rectification of inaccurate data</li>
-      <li>Right to erasure ("right to be forgotten")</li>
-      <li>Right to restriction of processing</li>
-      <li>Right to data portability</li>
-      <li>Right to object to processing</li>
-    </ul>
-    <p>To exercise any of these rights, please contact us at <a href="mailto:contact@revveal.net">contact@revveal.net</a>.</p>
+    <nav class="legal-toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#s1">1. Who this covers</a></li>
+        <li><a href="#s2">2. The waitlist</a></li>
+        <li><a href="#s3">3. Data about you</a></li>
+        <li><a href="#s4">4. Data about creators</a></li>
+        <li><a href="#s5">5. Legal basis</a></li>
+        <li><a href="#s6">6. Retention</a></li>
+        <li><a href="#s7">7. Exported data</a></li>
+        <li><a href="#s8">8. Sub-processors</a></li>
+        <li><a href="#s9">9. Cookies and analytics</a></li>
+        <li><a href="#s10">10. Your rights as a user</a></li>
+        <li><a href="#creators">11. Your rights as a creator</a></li>
+        <li><a href="#s12">12. Security</a></li>
+        <li><a href="#s13">13. International transfers</a></li>
+        <li><a href="#s14">14. Changes</a></li>
+      </ol>
+    </nav>
 
-    <h2>7. Cookies</h2>
-    <p>We use cookies and similar tracking technologies to track activity on our platform and store certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+    <article class="legal-article">
 
-    <h2>8. Security</h2>
-    <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure or destruction.</p>
+      <p>
+        This Privacy Policy explains how <strong>Arthur Werts</strong>, a sole
+        trader registered in <strong>France</strong> at
+        <span class="legal-todo">[registered address — to be completed]</span>
+        ("we", "us"), handles personal data through Revveal
+        (<a href="https://revveal.net">revveal.net</a>). We are the data
+        controller for the processing described here.
+      </p>
 
-    <h2>9. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date.</p>
+      <h2 id="s1"><span class="n">01</span>Who this covers</h2>
+      <p>This policy covers three different groups of people, and their situations are not the same:</p>
+      <ul>
+        <li><strong>Waitlist subscribers</strong> — you gave us an email address and nothing else.</li>
+        <li><strong>Users</strong> — you have an account and run campaigns.</li>
+        <li><strong>Creators</strong> — your public TikTok data appears in our creator database. You are not our user, you have no account with us, and you never agreed to our Terms. Section 11 is written for you.</li>
+      </ul>
 
-    <h2>10. Contact</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:contact@revveal.net">contact@revveal.net</a>.</p>
-  </main>
-  <footer>© 2025 Revveal · <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Service</a></footer>
+      <h2 id="s2"><span class="n">02</span>The waitlist</h2>
+      <p>
+        If you join the waitlist, we collect <strong>your email address, and
+        nothing else</strong> — no name, no company, no tracking profile.
+      </p>
+      <ul>
+        <li>It is used to tell you when Revveal opens, and for occasional messages directly about that launch.</li>
+        <li>It is not sold, rented, shared with advertisers, or used for any unrelated mailing.</li>
+        <li>It is deleted on request, immediately, with no questions: reply to any message or write to <a href="mailto:contact@revveal.net">contact@revveal.net</a>.</li>
+        <li>If you have not created an account within twelve months of the launch notice, the address is deleted.</li>
+      </ul>
+
+      <h2 id="s3"><span class="n">03</span>Data we collect about you (the user)</h2>
+      <ul>
+        <li>
+          <strong>Account data</strong> — your email address and password. The
+          password is stored hashed by our authentication provider, Supabase;
+          we never see it in plain text.
+        </li>
+        <li>
+          <strong>Project data</strong> — the company name, website, sectors,
+          country, language and category you enter when creating a project,
+          used to match relevant creators.
+        </li>
+        <li>
+          <strong>Campaign and favourites data</strong> — the campaigns you run
+          and the creators you mark as saved, contacted, signed or declined, so
+          you can track your own outreach.
+        </li>
+        <li>
+          <strong>Payment data</strong> — handled entirely by Lemon Squeezy,
+          our payment provider and merchant of record. We receive confirmation
+          that a payment succeeded and which plan was bought; we never receive
+          your card details.
+        </li>
+      </ul>
+
+      <h2 id="s4"><span class="n">04</span>Data we collect about creators</h2>
+      <p>
+        To power creator search, we maintain a database built from
+        <strong>publicly available TikTok profile and post information</strong>,
+        collected on our behalf by a third-party data provider
+        (<strong>Bright Data</strong>). It consists of:
+      </p>
+      <ul>
+        <li>Username, display name, profile picture, biography, country and language;</li>
+        <li>Public counts — followers, likes, views — and statistics derived from them;</li>
+        <li>Recent public posts: captions, hashtags, engagement figures and thumbnail images;</li>
+        <li>Scores we compute ourselves from the above — engagement rate, audience quality, fake-follower risk, a reliability score, and a comparison between sponsored and organic posts.</li>
+      </ul>
+      <div class="legal-note">
+        <p>
+          We do <strong>not</strong> collect private messages, private or
+          restricted accounts, contact details such as email addresses or phone
+          numbers, or anything behind a login. We do not attempt to identify
+          creators beyond what their public TikTok profile already shows.
+        </p>
+      </div>
+      <p>
+        To be explicit about a claim this site used to make and no longer does:
+        this data is <strong>not</strong> obtained through the TikTok Research
+        API. It is public profile and post information collected by our data
+        provider.
+      </p>
+
+      <h2 id="s5"><span class="n">05</span>Legal basis</h2>
+      <ul>
+        <li>
+          <strong>Waitlist</strong> — your consent, given by submitting the
+          form. Withdrawable at any time.
+        </li>
+        <li>
+          <strong>Account and campaign data</strong> — performance of our
+          contract with you (the Terms of Service), and our legal obligations
+          for invoicing and accounting.
+        </li>
+        <li>
+          <strong>Creator data</strong> — our legitimate interest, and that of
+          our users, in enabling creator discovery from information the creator
+          has already published publicly on TikTok. We have weighed that
+          against creators' interests, which is why the database is limited to
+          public professional-facing information, why it holds no contact
+          details, and why Section 11 gives an unconditional removal route.
+        </li>
+      </ul>
+
+      <h2 id="s6"><span class="n">06</span>Retention</h2>
+      <ul>
+        <li><strong>Waitlist addresses</strong> — until you ask for removal, or twelve months after the launch notice.</li>
+        <li><strong>Account, project and campaign data</strong> — for as long as your account exists. Deleting your account deletes them.</li>
+        <li><strong>Invoices</strong> — retained by Lemon Squeezy and by us for the period French accounting law requires, which overrides a deletion request for those records alone.</li>
+        <li>
+          <strong>Creator records</strong> — kept in a shared pool and refreshed
+          periodically as campaigns re-encounter them. To be precise rather
+          than flattering: a record is not deleted merely because it has aged.
+          Freshness governs whether a creator is <em>re-checked before being
+          added</em> to a new campaign, not whether the record still exists.
+          Creators are removed on request, under Section 11.
+        </li>
+      </ul>
+
+      <h2 id="s7"><span class="n">07</span>Exported data</h2>
+      <p>
+        When a user exports campaign results as CSV or JSON, the file contains
+        creator data as described in Section 4, plus a link to each creator's
+        public TikTok profile. That export leaves our systems once downloaded:
+        we do not track what happens to it, and the user becomes responsible
+        for it under Section 7 of the
+        <a href="./terms.html#s7">Terms of Service</a>.
+      </p>
+
+      <h2 id="s8"><span class="n">08</span>Sub-processors</h2>
+      <p>These providers process data on our behalf. We do not sell personal data to anyone.</p>
+
+      <table class="legal-table">
+        <thead>
+          <tr><th>Provider</th><th>Purpose</th><th>Location</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supabase</td>
+            <td>Database, authentication and backend logic</td>
+            <td>European Union (Frankfurt)</td>
+          </tr>
+          <tr>
+            <td>Bright Data</td>
+            <td>Collects public TikTok creator and post information on our behalf</td>
+            <td>Israel / global</td>
+          </tr>
+          <tr>
+            <td>Lemon Squeezy</td>
+            <td>Payment processing, as merchant of record</td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td>Cloudflare (R2)</td>
+            <td>Stores copies of public profile pictures and post thumbnails so the interface does not depend on expiring TikTok links</td>
+            <td>European Union jurisdiction</td>
+          </tr>
+          <tr>
+            <td>images.weserv.nl</td>
+            <td>Image proxy for some post thumbnails, so your browser is not sent directly to TikTok's servers</td>
+            <td>Netherlands</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="s9"><span class="n">09</span>Cookies and analytics</h2>
+      <p>
+        <strong>This website sets no cookies and runs no analytics or
+        advertising scripts.</strong> There is nothing here to consent to,
+        which is why you are not being asked. The only third party your browser
+        contacts on these pages is Google Fonts, to load two typefaces.
+      </p>
+      <p>
+        Inside the application, a session token is stored in your browser so
+        that you stay signed in between visits. It is strictly necessary for
+        the Service to function and is not used to track you across other
+        sites. If we ever add product analytics, this section will be updated
+        before, not after.
+      </p>
+
+      <h2 id="s10"><span class="n">10</span>Your rights as a user</h2>
+      <p>
+        Under the GDPR you have the right to access your personal data, correct
+        it, erase it, restrict or object to its processing, and receive it in a
+        portable format. You may also withdraw consent where processing rests
+        on consent.
+      </p>
+      <ul>
+        <li>You can <strong>delete your account yourself</strong> from Settings. Doing so removes your account, projects, campaigns and favourites.</li>
+        <li>For anything else, write to <a href="mailto:contact@revveal.net">contact@revveal.net</a>. We answer within one month.</li>
+        <li>If you are unhappy with our answer, you may complain to your national supervisory authority — in France, the <a href="https://www.cnil.fr" rel="noopener">CNIL</a>.</li>
+      </ul>
+
+      <h2 id="creators"><span class="n">11</span>Your rights as a creator</h2>
+      <p>
+        If your public TikTok data appears in our creator database and you want
+        it removed, you do not have to justify the request.
+      </p>
+      <div class="legal-note">
+        <p>
+          Email <a href="mailto:contact@revveal.net">contact@revveal.net</a>
+          from an address, or with any proof, that lets us verify the account is
+          yours. We delete your record from the database and prevent it from
+          being collected again.
+        </p>
+        <p>
+          One honest limit: files that users already exported before your
+          request are outside our systems, and removing you from our database
+          cannot retroactively delete those copies. Under Section 6 of the
+          Terms, those users remain responsible for the data they hold.
+        </p>
+      </div>
+      <p>
+        You have the same GDPR rights as anyone else in the database — access,
+        rectification, erasure, restriction, objection — exercised through the
+        same address.
+      </p>
+
+      <h2 id="s12"><span class="n">12</span>Security</h2>
+      <p>
+        Data is stored with Supabase in the European Union and protected by
+        row-level access controls, so each user can only read their own
+        projects, campaigns and favourites. Passwords are hashed and never
+        visible to us. All traffic is encrypted in transit. No method of
+        transmission or storage is perfectly secure, and we do not claim
+        absolute security.
+      </p>
+
+      <h2 id="s13"><span class="n">13</span>International transfers</h2>
+      <p>
+        Our database is hosted in the European Union. Some sub-processors
+        listed in Section 8 process data outside the EU — notably Lemon Squeezy
+        in the United States. Where that happens we rely on the appropriate
+        safeguards, such as the European Commission's standard contractual
+        clauses, offered by those providers.
+      </p>
+
+      <h2 id="s14"><span class="n">14</span>Changes</h2>
+      <p>
+        We may update this Policy from time to time. Material changes will be
+        reflected by an updated "Last updated" date at the top of this page. If
+        a change materially affects how we handle data about you and we hold
+        your email address, we will tell you directly.
+      </p>
+
+      <p class="legal-end">
+        Revveal · Arthur Werts, sole trader, France ·
+        <a href="mailto:contact@revveal.net">contact@revveal.net</a> ·
+        See also the <a href="./terms.html">Terms of Service</a>.
+      </p>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-base" style="border-top:0; padding-top:0;">
+      <span>© <span id="year">2026</span> Revveal · Arthur Werts, sole trader, France</span>
+      <span class="mono">revveal.net</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
