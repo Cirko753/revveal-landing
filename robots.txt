@@ -1,0 +1,12 @@
+# https://www.revveal.net/robots.txt
+
+User-agent: *
+Allow: /
+
+# Pages sans interet pour un moteur : la premiere est un formulaire, la
+# seconde n'existe que apres envoi. Elles portent deja <meta name="robots"
+# content="noindex">, ce qui est ce qui fait foi — cette ligne evite juste
+# de depenser du budget d'exploration dessus.
+Disallow: /thank-you.html
+
+Sitemap: https://www.revveal.net/sitemap.xml

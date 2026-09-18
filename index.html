@@ -3,14 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Revveal — What a TikTok creator is worth once the post is paid</title>
+  <title>Revveal — TikTok creator search and analytics for brands</title>
   <meta name="description" content="Revveal finds TikTok creators for your campaign and measures what their engagement does when a post is sponsored. One payment per campaign. No subscription." />
   <meta name="theme-color" content="#1e2029" />
 
-  <meta property="og:title" content="Revveal — What a TikTok creator is worth once the post is paid" />
+  <meta property="og:title" content="Revveal — TikTok creator search and analytics for brands" />
   <meta property="og:description" content="Creator discovery and analysis for TikTok. Sponsored-vs-organic gap, fake-follower risk, category benchmarks. One payment per campaign." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://revveal.net" />
+  <meta property="og:url" content="https://www.revveal.net/" />
+
+  <!-- Canonique sur www : l'apex revveal.net n'a AUCUN enregistrement
+       DNS au 2026-09-18, il ne resout pas. Pointer la canonique dessus
+       reviendrait a dire a Google que la version de reference de cette
+       page se trouve a une adresse qui n'existe pas. A basculer sur
+       l'apex le jour ou il est ajoute dans Vercel, pas avant. -->
+  <link rel="canonical" href="https://www.revveal.net/" />
+
+  <meta property="og:site_name" content="Revveal" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:image" content="https://www.revveal.net/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Revveal — an engagement rate nobody paid for tells you nothing." />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
 
@@ -21,6 +36,59 @@
   <!-- Pose avant le rendu : voir la note sur .reveal dans base.css.
        Les elements ne sont masques que si ce script a tourne. -->
   <script>document.documentElement.classList.add('js');</script>
+
+
+  <!-- Donnees structurees. Elles ne font pas monter une page dans les
+       resultats : elles servent a ce que Google rattache le mot « Revveal »
+       a UNE entite precise plutot qu'a une faute de frappe pour « reveal ».
+       C'est exactement le probleme de la requete de marque.
+
+       Rien ici n'est invente : pas de note moyenne, pas d'avis, pas de prix.
+       Un `offers` sur un produit qu'on ne peut pas encore acheter serait faux,
+       et une note fabriquee est une raison de sanction manuelle. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.revveal.net/#organization",
+        "name": "Revveal",
+        "url": "https://www.revveal.net/",
+        "email": "contact@revveal.net",
+        "description": "Creator discovery and analytics for TikTok influencer campaigns.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.revveal.net/logo-512.png",
+          "width": 512,
+          "height": 512
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Boulogne-Billancourt",
+          "addressCountry": "FR"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.revveal.net/#website",
+        "url": "https://www.revveal.net/",
+        "name": "Revveal",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://www.revveal.net/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Revveal",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web browser",
+        "url": "https://www.revveal.net/",
+        "publisher": { "@id": "https://www.revveal.net/#organization" },
+        "description": "Finds TikTok creators for a brand campaign and measures the gap between their organic and sponsored posts, alongside fake-follower risk and category benchmarks."
+      }
+    ]
+  }
+  </script>
 
   <link rel="stylesheet" href="./base.css" />
   <link rel="stylesheet" href="./index.css" />
