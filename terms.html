@@ -15,12 +15,22 @@
        l'apex le jour ou il est ajoute dans Vercel, pas avant. -->
   <link rel="canonical" href="https://www.revveal.net/terms.html" />
 
+  <!-- Paires de langue. Reciproques et obligatoirement completes :
+       chaque version se declare ELLE-MEME en plus de son alternative,
+       sinon Google ignore tout le groupe. x-default pointe sur
+       l'anglais, qui est la version par defaut du site. -->
+  <link rel="alternate" hreflang="en" href="https://www.revveal.net/terms.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/terms.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.revveal.net/terms.html" />
+
+
   <meta property="og:title" content="Terms of Service — Revveal" />
   <meta property="og:description" content="The terms governing access to and use of Revveal, the TikTok creator intelligence service." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.revveal.net/terms.html" />
   <meta property="og:site_name" content="Revveal" />
   <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale:alternate" content="fr_FR" />
   <meta property="og:image" content="https://www.revveal.net/og-cover.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -59,10 +69,16 @@
       <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
       <span class="brand-name">Re<i>vv</i>eal</span>
     </a>
-    <a href="./index.html" class="legal-back">
-      <svg><use href="#i-back" /></svg>
-      Back to home
-    </a>
+    <div class="nav-end">
+      <nav class="lang-switch" aria-label="Language">
+        <a href="./terms.html" hreflang="en" lang="en" aria-current="true">EN</a>
+        <a href="./fr/terms.html" hreflang="fr" lang="fr">FR</a>
+      </nav>
+      <a href="./index.html" class="legal-back">
+        <svg><use href="#i-back" /></svg>
+        Back to home
+      </a>
+    </div>
   </div>
 </header>
 

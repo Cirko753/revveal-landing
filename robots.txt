@@ -8,5 +8,6 @@ Allow: /
 # content="noindex">, ce qui est ce qui fait foi — cette ligne evite juste
 # de depenser du budget d'exploration dessus.
 Disallow: /thank-you.html
+Disallow: /fr/thank-you.html
 
 Sitemap: https://www.revveal.net/sitemap.xml

@@ -232,6 +232,41 @@ a { color: inherit; }
 
 .nav-end { display: flex; align-items: center; gap: 1.25rem; }
 
+/* ── Selecteur de langue ────────────────────────────────────
+   Deux liens, pas un <select> : ce sont deux URL distinctes que
+   l'on doit pouvoir ouvrir dans un onglet, copier, et que Google
+   doit pouvoir suivre. Un menu deroulant pilote en JS ne serait
+   explorable par aucun des deux.
+
+   Volontairement discret — c'est un utilitaire, pas un argument
+   de vente. Il ne doit jamais rivaliser avec l'appel a l'action
+   qui le suit dans la barre. */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  padding: 2px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  flex: none;
+}
+.lang-switch a {
+  display: block;
+  padding: 0.28rem 0.5rem;
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  text-decoration: none;
+  transition: color 0.18s ease, background 0.18s ease;
+}
+.lang-switch a:hover { color: var(--text); }
+.lang-switch a[aria-current] {
+  background: hsl(0 0% 100% / 0.07);
+  color: var(--text);
+}
+
 /* ── Boutons ────────────────────────────────────────────────
    Aucune box-shadow coloree. Le halo violet de l'ancien
    .btn-primary suivait le bouton sur toute la page et donnait
@@ -370,8 +405,19 @@ a { color: inherit; }
    dans le pied de page et dans chaque page legale) et le bloc de
    marque redescend d'un cran. Sans cela le bouton passait sur deux
    lignes et sortait de la barre. */
+/* Sous 560px la barre porte marque + selecteur de langue + appel a
+   l'action, et les 335px utiles ne suffisent plus : mesure faite, le
+   bouton finissait a 390px, donc rogne. On resserre les trois, plutot
+   que de sacrifier le selecteur — c'est justement sur mobile qu'un
+   visiteur doit pouvoir basculer de langue.
+   `overflow-x: hidden` sur body masquait le debordement au lieu de le
+   signaler : ne jamais s'y fier pour conclure qu'une barre tient. */
 @media (max-width: 560px) {
   .nav-mail { display: none; }
+  .nav-end { gap: 0.55rem; }
+  .nav .wrap { gap: 0.55rem; }
+  .lang-switch a { padding: 0.28rem 0.35rem; }
+  .nav .btn--sm { padding: 0.5rem 0.7rem; }
   .brand { gap: 0.4rem; }
   .brand-mark { width: 20px; height: 20px; margin-top: 1px; }
   .brand-name { font-size: 1.3125rem; }

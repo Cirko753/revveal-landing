@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique de confidentialité — Revveal</title>
+  <meta name="description" content="Comment Revveal traite les données personnelles — pour les utilisateurs du service et pour les créateurs TikTok dont les données publiques y figurent." />
+  <meta name="theme-color" content="#1e2029" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonique sur www : l'apex revveal.net n'a AUCUN enregistrement
+       DNS au 2026-09-18, il ne resout pas. Pointer la canonique dessus
+       reviendrait a dire a Google que la version de reference de cette
+       page se trouve a une adresse qui n'existe pas. A basculer sur
+       l'apex le jour ou il est ajoute dans Vercel, pas avant. -->
+  <link rel="canonical" href="https://www.revveal.net/fr/privacy.html" />
+
+  <!-- Paires de langue. Reciproques et obligatoirement completes :
+       chaque version se declare ELLE-MEME en plus de son alternative,
+       sinon Google ignore tout le groupe. x-default pointe sur
+       l'anglais, qui est la version par defaut du site. -->
+  <link rel="alternate" hreflang="en" href="https://www.revveal.net/privacy.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/privacy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.revveal.net/privacy.html" />
+
+
+  <meta property="og:title" content="Politique de confidentialité — Revveal" />
+  <meta property="og:description" content="Comment Revveal traite les données personnelles — pour les utilisateurs du service et pour les créateurs TikTok dont les données publiques y figurent." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.revveal.net/fr/privacy.html" />
+  <meta property="og:site_name" content="Revveal" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:image" content="https://www.revveal.net/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Revveal — un taux d'engagement que personne n'a payé ne vous apprend rien." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../base.css" />
+  <link rel="stylesheet" href="../legal.css" />
+</head>
+
+<body>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <!-- Monogramme : un V evide dans un V plein — les deux « v » de Revveal,
+       emboites l'un au-dessus de l'autre. Le creux est un trou (fill-rule
+       evenodd) et non un aplat couleur de fond : la marque doit tenir aussi
+       bien sur --bg que sur le --bg-deep du pied de page. -->
+  <symbol id="i-logo" viewBox="0 0 32 32">
+    <path fill="currentColor" fill-rule="evenodd"
+          d="M1.5 4.5 H9.5 L16 16.2 L22.5 4.5 H30.5 L16 30 Z M11.6 4.5 H20.4 L16 12.4 Z"/>
+  </symbol>
+  <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 12H6" /><path d="M11 6.5 5.5 12 11 17.5" />
+  </symbol>
+</svg>
+
+<header class="nav is-scrolled">
+  <div class="wrap legal-nav">
+    <a href="./index.html" class="brand" aria-label="Revveal, retour à l'accueil">
+      <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
+      <span class="brand-name">Re<i>vv</i>eal</span>
+    </a>
+    <div class="nav-end">
+      <nav class="lang-switch" aria-label="Langue">
+        <a href="../privacy.html" hreflang="en" lang="en">EN</a>
+        <a href="./privacy.html" hreflang="fr" lang="fr" aria-current="true">FR</a>
+      </nav>
+      <a href="./index.html" class="legal-back">
+        <svg><use href="#i-back" /></svg>
+        Retour à l'accueil
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="legal-head">
+    <div class="wrap">
+      <span class="eyebrow">Mentions légales</span>
+      <h1>Politique de confidentialité</h1>
+      <p class="legal-meta">
+        <span>Dernière mise à jour : 18 septembre 2026</span>
+        <span>Questions : <a href="mailto:contact@revveal.net">contact@revveal.net</a></span>
+      </p>
+
+      <nav class="legal-switch" aria-label="Documents légaux">
+        <a href="./terms.html">Conditions d'utilisation</a>
+        <a href="./privacy.html" aria-current="page">Politique de confidentialité</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap legal-body">
+
+    <nav class="legal-toc" aria-label="Sur cette page">
+      <h2>Sur cette page</h2>
+      <ol>
+        <li><a href="#s1">1. Qui est concerné</a></li>
+        <li><a href="#s2">2. La liste d'attente</a></li>
+        <li><a href="#s3">3. Données vous concernant</a></li>
+        <li><a href="#s4">4. Données sur les créateurs</a></li>
+        <li><a href="#s5">5. Bases légales</a></li>
+        <li><a href="#s6">6. Conservation</a></li>
+        <li><a href="#s7">7. Données exportées</a></li>
+        <li><a href="#s8">8. Sous-traitants</a></li>
+        <li><a href="#s9">9. Cookies et mesure d'audience</a></li>
+        <li><a href="#s10">10. Vos droits en tant qu'utilisateur</a></li>
+        <li><a href="#creators">11. Vos droits en tant que créateur</a></li>
+        <li><a href="#s12">12. Sécurité</a></li>
+        <li><a href="#s13">13. Transferts hors UE</a></li>
+        <li><a href="#s14">14. Modifications</a></li>
+      </ol>
+    </nav>
+
+    <article class="legal-article">
+
+      <p>
+        La présente politique explique comment <strong>Arthur Werts</strong>,
+        entrepreneur individuel immatriculé à
+        <strong>Boulogne-Billancourt, France</strong> (« nous »), traite les
+        données personnelles via Revveal
+        (<a href="https://www.revveal.net">revveal.net</a>). Nous sommes
+        responsable de traitement pour les traitements décrits ici.
+      </p>
+
+      <h2 id="s1"><span class="n">01</span>Qui est concerné</h2>
+      <p>Cette politique couvre trois groupes de personnes, dont les situations diffèrent :</p>
+      <ul>
+        <li><strong>Inscrits à la liste d'attente</strong> — vous nous avez donné une adresse e-mail, et rien d'autre.</li>
+        <li><strong>Utilisateurs</strong> — vous avez un compte et lancez des campagnes.</li>
+        <li><strong>Créateurs</strong> — vos données TikTok publiques figurent dans notre base de créateurs. Vous n'êtes pas notre utilisateur, vous n'avez pas de compte chez nous, et vous n'avez jamais accepté nos Conditions. La section 11 est écrite pour vous.</li>
+      </ul>
+
+      <h2 id="s2"><span class="n">02</span>La liste d'attente</h2>
+      <p>
+        Si vous rejoignez la liste d'attente, nous collectons
+        <strong>votre adresse e-mail, et rien d'autre</strong> — pas de nom,
+        pas de société, aucun profil de suivi.
+      </p>
+      <ul>
+        <li>Elle sert à vous prévenir de l'ouverture de Revveal, et pour d'éventuels messages portant directement sur ce lancement.</li>
+        <li>Elle n'est ni vendue, ni louée, ni partagée avec des annonceurs, ni utilisée pour un envoi sans rapport.</li>
+        <li>Elle est supprimée sur demande, immédiatement, sans justification : répondez à n'importe quel message ou écrivez à <a href="mailto:contact@revveal.net">contact@revveal.net</a>.</li>
+        <li>Si vous n'avez pas créé de compte dans les douze mois suivant l'avis de lancement, l'adresse est supprimée.</li>
+      </ul>
+
+      <h2 id="s3"><span class="n">03</span>Données que nous collectons sur vous (utilisateur)</h2>
+      <ul>
+        <li>
+          <strong>Données de compte</strong> — votre adresse e-mail et votre
+          mot de passe. Le mot de passe est stocké sous forme hachée par notre
+          prestataire d'authentification, Supabase ; nous ne le voyons jamais
+          en clair.
+        </li>
+        <li>
+          <strong>Données de projet</strong> — le nom de société, le site web,
+          les secteurs, le pays, la langue et la catégorie que vous saisissez
+          à la création d'un projet, utilisés pour trouver des créateurs
+          pertinents.
+        </li>
+        <li>
+          <strong>Données de campagne et de favoris</strong> — les campagnes
+          que vous lancez et les créateurs que vous marquez enregistré,
+          contacté, signé ou refusé, pour suivre votre propre démarchage.
+        </li>
+        <li>
+          <strong>Données de paiement</strong> — entièrement gérées par Lemon
+          Squeezy, notre prestataire de paiement et vendeur de référence. Nous
+          recevons la confirmation qu'un paiement a abouti et la formule
+          achetée ; nous ne recevons jamais vos coordonnées bancaires.
+        </li>
+      </ul>
+
+      <h2 id="s4"><span class="n">04</span>Données que nous collectons sur les créateurs</h2>
+      <p>
+        Pour alimenter la recherche de créateurs, nous maintenons une base
+        constituée d'<strong>informations publiques de profils et de posts
+        TikTok</strong>, collectées pour notre compte par un fournisseur de
+        données tiers (<strong>Bright Data</strong>). Elle contient :
+      </p>
+      <ul>
+        <li>Pseudo, nom affiché, photo de profil, biographie, pays et langue ;</li>
+        <li>Compteurs publics — abonnés, likes, vues — et statistiques qui en découlent ;</li>
+        <li>Posts publics récents : légendes, hashtags, chiffres d'engagement et vignettes ;</li>
+        <li>Scores que nous calculons nous-mêmes à partir de ce qui précède — taux d'engagement, qualité d'audience, risque de faux abonnés, score de fiabilité, et comparaison entre posts sponsorisés et organiques.</li>
+      </ul>
+      <div class="legal-note">
+        <p>
+          Nous ne collectons <strong>pas</strong> de messages privés, de comptes
+          privés ou restreints, de coordonnées telles qu'adresses e-mail ou
+          numéros de téléphone, ni quoi que ce soit derrière une authentification.
+          Nous ne cherchons pas à identifier les créateurs au-delà de ce que
+          leur profil TikTok public montre déjà.
+        </p>
+      </div>
+      <p>
+        Pour être explicite sur une affirmation que ce site a portée et ne porte
+        plus : ces données ne sont <strong>pas</strong> obtenues via l'API
+        TikTok Research. Ce sont des informations publiques de profils et de
+        posts collectées par notre fournisseur de données.
+      </p>
+
+      <h2 id="s5"><span class="n">05</span>Bases légales</h2>
+      <ul>
+        <li>
+          <strong>Liste d'attente</strong> — votre consentement, donné en
+          soumettant le formulaire. Retirable à tout moment.
+        </li>
+        <li>
+          <strong>Données de compte et de campagne</strong> — l'exécution de
+          notre contrat avec vous (les Conditions d'utilisation), et nos
+          obligations légales de facturation et de comptabilité.
+        </li>
+        <li>
+          <strong>Données créateurs</strong> — notre intérêt légitime, et celui
+          de nos utilisateurs, à permettre la découverte de créateurs à partir
+          d'informations que le créateur a déjà rendues publiques sur TikTok.
+          Nous l'avons mis en balance avec les intérêts des créateurs : c'est
+          pourquoi la base se limite à des informations publiques à vocation
+          professionnelle, ne contient aucune coordonnée, et pourquoi la
+          section 11 ouvre une voie de retrait inconditionnelle.
+        </li>
+      </ul>
+
+      <h2 id="s6"><span class="n">06</span>Conservation</h2>
+      <ul>
+        <li><strong>Adresses de la liste d'attente</strong> — jusqu'à votre demande de retrait, ou douze mois après l'avis de lancement.</li>
+        <li><strong>Données de compte, de projet et de campagne</strong> — tant que votre compte existe. Sa suppression les efface.</li>
+        <li><strong>Factures</strong> — conservées par Lemon Squeezy et par nous pendant la durée qu'impose le droit comptable français, qui prime sur une demande de suppression pour ces seuls documents.</li>
+        <li>
+          <strong>Fiches créateurs</strong> — conservées dans un fonds commun et
+          rafraîchies périodiquement, au fil des campagnes qui les rencontrent à
+          nouveau. Pour être précis plutôt que flatteur : une fiche n'est pas
+          supprimée du seul fait de son ancienneté. La fraîcheur détermine si un
+          créateur est <em>revérifié avant d'être ajouté</em> à une nouvelle
+          campagne, pas si la fiche existe encore. Les créateurs sont retirés sur
+          demande, au titre de la section 11.
+        </li>
+      </ul>
+
+      <h2 id="s7"><span class="n">07</span>Données exportées</h2>
+      <p>
+        Lorsqu'un utilisateur exporte les résultats d'une campagne en CSV ou
+        JSON, le fichier contient les données créateurs décrites à la section 4,
+        ainsi qu'un lien vers le profil TikTok public de chaque créateur. Cet
+        export quitte nos systèmes une fois téléchargé : nous ne suivons pas ce
+        qu'il devient, et l'utilisateur en devient responsable au titre de la
+        section 7 des <a href="./terms.html#s7">Conditions d'utilisation</a>.
+      </p>
+
+      <h2 id="s8"><span class="n">08</span>Sous-traitants</h2>
+      <p>Ces prestataires traitent des données pour notre compte. Nous ne vendons de données personnelles à personne.</p>
+
+      <table class="legal-table">
+        <thead>
+          <tr><th>Prestataire</th><th>Finalité</th><th>Localisation</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supabase</td>
+            <td>Base de données, authentification et logique serveur</td>
+            <td>Union européenne (Francfort)</td>
+          </tr>
+          <tr>
+            <td>Bright Data</td>
+            <td>Collecte pour notre compte les informations publiques de créateurs et de posts TikTok</td>
+            <td>Israël / international</td>
+          </tr>
+          <tr>
+            <td>Lemon Squeezy</td>
+            <td>Traitement des paiements, en tant que vendeur de référence</td>
+            <td>États-Unis</td>
+          </tr>
+          <tr>
+            <td>Cloudflare (R2)</td>
+            <td>Stocke des copies des photos de profil et vignettes publiques, pour que l'interface ne dépende pas de liens TikTok qui expirent</td>
+            <td>Juridiction Union européenne</td>
+          </tr>
+          <tr>
+            <td>images.weserv.nl</td>
+            <td>Proxy d'images pour certaines vignettes, afin que votre navigateur ne soit pas envoyé directement vers les serveurs de TikTok</td>
+            <td>Pays-Bas</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="s9"><span class="n">09</span>Cookies et mesure d'audience</h2>
+      <p>
+        <strong>Ce site ne dépose aucun cookie et n'exécute aucun script de
+        mesure d'audience ou de publicité.</strong> Il n'y a rien à consentir
+        ici, et c'est pourquoi rien ne vous est demandé. Le seul tiers que votre
+        navigateur contacte sur ces pages est Google Fonts, pour charger deux
+        polices de caractères.
+      </p>
+      <p>
+        Dans l'application, un jeton de session est stocké dans votre navigateur
+        pour vous maintenir connecté d'une visite à l'autre. Il est strictement
+        nécessaire au fonctionnement du Service et ne sert pas à vous suivre sur
+        d'autres sites. Si nous ajoutons un jour une mesure d'audience produit,
+        cette section sera mise à jour avant, pas après.
+      </p>
+
+      <h2 id="s10"><span class="n">10</span>Vos droits en tant qu'utilisateur</h2>
+      <p>
+        Au titre du RGPD, vous disposez d'un droit d'accès à vos données
+        personnelles, de rectification, d'effacement, de limitation et
+        d'opposition au traitement, ainsi que d'un droit à la portabilité. Vous
+        pouvez également retirer votre consentement lorsque le traitement repose
+        sur celui-ci.
+      </p>
+      <ul>
+        <li>Vous pouvez <strong>supprimer votre compte vous-même</strong> depuis les Paramètres. Cela efface votre compte, vos projets, vos campagnes et vos favoris.</li>
+        <li>Pour toute autre demande, écrivez à <a href="mailto:contact@revveal.net">contact@revveal.net</a>. Nous répondons sous un mois.</li>
+        <li>Si notre réponse ne vous satisfait pas, vous pouvez saisir votre autorité de contrôle nationale — en France, la <a href="https://www.cnil.fr" rel="noopener">CNIL</a>.</li>
+      </ul>
+
+      <h2 id="creators"><span class="n">11</span>Vos droits en tant que créateur</h2>
+      <p>
+        Si vos données TikTok publiques figurent dans notre base de créateurs et
+        que vous souhaitez leur retrait, vous n'avez pas à motiver votre demande.
+      </p>
+      <div class="legal-note">
+        <p>
+          Écrivez à <a href="mailto:contact@revveal.net">contact@revveal.net</a>
+          depuis une adresse, ou avec tout élément, qui nous permette de vérifier
+          que le compte est le vôtre. Nous supprimons votre fiche de la base et
+          empêchons qu'elle soit collectée à nouveau.
+        </p>
+        <p>
+          Une limite, dite honnêtement : les fichiers que des utilisateurs ont
+          déjà exportés avant votre demande se trouvent hors de nos systèmes, et
+          votre retrait de notre base ne peut pas effacer rétroactivement ces
+          copies. Au titre de la section 6 des Conditions, ces utilisateurs
+          restent responsables des données qu'ils détiennent.
+        </p>
+      </div>
+      <p>
+        Vous disposez des mêmes droits RGPD que toute autre personne figurant
+        dans la base — accès, rectification, effacement, limitation, opposition
+        — exercés à la même adresse.
+      </p>
+
+      <h2 id="s12"><span class="n">12</span>Sécurité</h2>
+      <p>
+        Les données sont stockées chez Supabase dans l'Union européenne et
+        protégées par des contrôles d'accès au niveau de la ligne, de sorte que
+        chaque utilisateur ne peut lire que ses propres projets, campagnes et
+        favoris. Les mots de passe sont hachés et ne nous sont jamais visibles.
+        Tout le trafic est chiffré en transit. Aucune méthode de transmission ou
+        de stockage n'est parfaitement sûre, et nous ne prétendons pas à une
+        sécurité absolue.
+      </p>
+
+      <h2 id="s13"><span class="n">13</span>Transferts hors UE</h2>
+      <p>
+        Notre base de données est hébergée dans l'Union européenne. Certains
+        sous-traitants listés à la section 8 traitent des données hors de l'UE —
+        notamment Lemon Squeezy aux États-Unis. Lorsque c'est le cas, nous nous
+        appuyons sur les garanties appropriées, telles que les clauses
+        contractuelles types de la Commission européenne, proposées par ces
+        prestataires.
+      </p>
+
+      <h2 id="s14"><span class="n">14</span>Modifications</h2>
+      <p>
+        Nous pouvons mettre à jour cette politique de temps à autre. Les
+        modifications substantielles se traduiront par une mise à jour de la
+        date en haut de cette page. Si un changement affecte substantiellement
+        la façon dont nous traitons vos données et que nous disposons de votre
+        adresse e-mail, nous vous en informerons directement.
+      </p>
+
+      <p class="legal-end">
+        Revveal · Arthur Werts, entrepreneur individuel, France ·
+        <a href="mailto:contact@revveal.net">contact@revveal.net</a> ·
+        Voir aussi les <a href="./terms.html">Conditions d'utilisation</a>.
+      </p>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-base" style="border-top:0; padding-top:0;">
+      <span>© <span id="year">2026</span> Revveal · Arthur Werts, sole trader, France</span>
+      <span class="mono">revveal.net</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

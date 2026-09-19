@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Revveal — TikTok creator search and analytics for brands</title>
-  <meta name="description" content="Revveal finds TikTok creators for your campaign and measures what their engagement does when a post is sponsored. One payment per campaign. No subscription." />
+  <title>Revveal — Recherche et analyse de créateurs TikTok pour les marques</title>
+  <meta name="description" content="Revveal trouve les créateurs TikTok de votre campagne et mesure ce que devient leur engagement quand un post est sponsorisé. Un paiement par campagne, sans abonnement." />
   <meta name="theme-color" content="#1e2029" />
 
-  <meta property="og:title" content="Revveal — TikTok creator search and analytics for brands" />
-  <meta property="og:description" content="Creator discovery and analysis for TikTok. Sponsored-vs-organic gap, fake-follower risk, category benchmarks. One payment per campaign." />
+  <meta property="og:title" content="Revveal — Recherche et analyse de créateurs TikTok pour les marques" />
+  <meta property="og:description" content="Recherche et analyse de créateurs TikTok. Écart sponsorisé/organique, risque de faux abonnés, référence par catégorie. Un paiement par campagne." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.revveal.net/" />
+  <meta property="og:url" content="https://www.revveal.net/fr/" />
 
   <!-- Canonique sur www : l'apex revveal.net n'a AUCUN enregistrement
        DNS au 2026-09-18, il ne resout pas. Pointer la canonique dessus
-       reviendrait a dire a Google que la version de reference de cette
+       reviendrait a dire a Google que la version de référence de cette
        page se trouve a une adresse qui n'existe pas. A basculer sur
        l'apex le jour ou il est ajoute dans Vercel, pas avant. -->
-  <link rel="canonical" href="https://www.revveal.net/" />
+  <link rel="canonical" href="https://www.revveal.net/fr/" />
 
   <!-- Paires de langue. Reciproques et obligatoirement completes :
        chaque version se declare ELLE-MEME en plus de son alternative,
@@ -29,15 +29,15 @@
 
 
   <meta property="og:site_name" content="Revveal" />
-  <meta property="og:locale" content="en_GB" />
-  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_GB" />
   <meta property="og:image" content="https://www.revveal.net/og-cover.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Revveal — an engagement rate nobody paid for tells you nothing." />
+  <meta property="og:image:alt" content="Revveal — un taux d'engagement que personne n'a payé ne vous apprend rien." />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +50,7 @@
 
   <!-- Donnees structurees. Elles ne font pas monter une page dans les
        resultats : elles servent a ce que Google rattache le mot « Revveal »
-       a UNE entite precise plutot qu'a une faute de frappe pour « reveal ».
+       a UNE entite precise plutôt qu'a une faute de frappe pour « reveal ».
        C'est exactement le probleme de la requete de marque.
 
        Rien ici n'est invente : pas de note moyenne, pas d'avis, pas de prix.
@@ -66,7 +66,7 @@
         "name": "Revveal",
         "url": "https://www.revveal.net/",
         "email": "contact@revveal.net",
-        "description": "Creator discovery and analytics for TikTok influencer campaigns.",
+        "description": "Recherche et analyse de créateurs pour les campagnes d'influence TikTok.",
         "logo": {
           "@type": "ImageObject",
           "url": "https://www.revveal.net/logo-512.png",
@@ -81,33 +81,33 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.revveal.net/#website",
-        "url": "https://www.revveal.net/",
+        "@id": "https://www.revveal.net/fr/#website",
+        "url": "https://www.revveal.net/fr/",
         "name": "Revveal",
-        "inLanguage": "en",
+        "inLanguage": "fr",
         "publisher": { "@id": "https://www.revveal.net/#organization" }
       },
       {
         "@type": "SoftwareApplication",
         "name": "Revveal",
         "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web browser",
-        "url": "https://www.revveal.net/",
+        "operatingSystem": "Navigateur web",
+        "url": "https://www.revveal.net/fr/",
         "publisher": { "@id": "https://www.revveal.net/#organization" },
-        "description": "Finds TikTok creators for a brand campaign and measures the gap between their organic and sponsored posts, alongside fake-follower risk and category benchmarks."
+        "description": "Trouve les créateurs TikTok d'une campagne de marque et mesure l'écart entre leurs posts organiques et sponsorisés, avec le risque de faux abonnés et une référence par catégorie."
       }
     ]
   }
   </script>
 
-  <link rel="stylesheet" href="./base.css" />
-  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="../base.css" />
+  <link rel="stylesheet" href="../index.css" />
 </head>
 
 <body>
 
-<!-- Jeu d'icones en <symbol>, reference par <use>. Trait de 1.5,
-     couleur heritee : des pictogrammes fins et monochromes plutot
+<!-- Jeu d'icones en <symbol>, référence par <use>. Trait de 1.5,
+     couleur heritee : des pictogrammes fins et monochromes plutôt
      que les emojis de l'ancienne version, qui etaient la signature
      visuelle la plus reconnaissable d'une page generee. -->
 <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
@@ -167,27 +167,27 @@
 <!-- ══ NAVIGATION ══════════════════════════════════════════ -->
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="./index.html" class="brand" aria-label="Revveal, back to home">
+    <a href="./index.html" class="brand" aria-label="Revveal, retour à l'accueil">
       <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
       <span class="brand-name">Re<i>vv</i>eal</span>
     </a>
 
     <nav>
       <ul class="nav-links">
-        <li><a href="#difference">Why Revveal</a></li>
-        <li><a href="#analysis">The analysis</a></li>
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#difference">Pourquoi Revveal</a></li>
+        <li><a href="#analysis">L'analyse</a></li>
+        <li><a href="#how">Fonctionnement</a></li>
+        <li><a href="#pricing">Tarifs</a></li>
       </ul>
     </nav>
 
     <div class="nav-end">
-      <nav class="lang-switch" aria-label="Language">
-        <a href="./index.html" hreflang="en" lang="en" aria-current="true">EN</a>
-        <a href="./fr/index.html" hreflang="fr" lang="fr">FR</a>
+      <nav class="lang-switch" aria-label="Langue">
+        <a href="../index.html" hreflang="en" lang="en">EN</a>
+        <a href="./index.html" hreflang="fr" lang="fr" aria-current="true">FR</a>
       </nav>
       <a href="mailto:contact@revveal.net" class="nav-mail">Contact</a>
-      <a href="./waitlist.html" class="btn btn--primary btn--sm">Join the waitlist</a>
+      <a href="./waitlist.html" class="btn btn--primary btn--sm">Rejoindre la liste</a>
     </div>
   </div>
 </header>
@@ -200,37 +200,37 @@
     <div class="wrap hero-grid">
 
       <div class="hero-copy">
-        <span class="eyebrow">TikTok creator intelligence</span>
+        <span class="eyebrow">Intelligence créateurs TikTok</span>
 
-        <h1>An engagement rate nobody paid for tells you nothing.</h1>
+        <h1>Un taux d'engagement que personne n'a payé ne vous apprend rien.</h1>
 
         <p class="lede">
-          Revveal finds the TikTok creators who fit your brand, then measures
-          what their audience actually does when a post is sponsored — the one
-          number that predicts what your campaign will return.
+          Revveal trouve les créateurs TikTok qui correspondent à votre marque,
+          puis mesure ce que fait réellement leur audience quand un post est
+          sponsorisé — le seul chiffre qui prédit ce que votre campagne rapportera.
         </p>
 
         <div class="hero-actions">
           <a href="./waitlist.html" class="btn btn--primary btn--lg">
-            Join the waitlist
+            Rejoindre la liste d'attente
             <svg class="arrow" width="16" height="16"><use href="#i-arrow" /></svg>
           </a>
-          <a href="#analysis" class="btn btn--ghost btn--lg">See what an analysis shows</a>
+          <a href="#analysis" class="btn btn--ghost btn--lg">Voir ce que contient une analyse</a>
         </div>
 
         <ul class="hero-facts">
-          <li>One payment per campaign</li>
-          <li>No subscription</li>
-          <li>Free trial, no card</li>
+          <li>Un paiement par campagne</li>
+          <li>Sans abonnement</li>
+          <li>Essai gratuit, sans carte</li>
         </ul>
       </div>
 
       <!-- Panneau d'illustration. Il montre le differenciateur
-           (l'ecart sponsorise/organique) et non trois compteurs
+           (l'écart sponsorisé/organique) et non trois compteurs
            inventes : l'ancienne version affichait « 24 810
-           createurs analyses », un chiffre faux qui ne disait rien
+           créateurs analyses », un chiffre faux qui ne disait rien
            du produit. Legende explicite plus bas : c'est une
-           illustration, pas une capture de donnees reelles. -->
+           illustration, pas une capture de données reelles. -->
       <figure class="hero-panel reveal">
         <div class="panel">
 
@@ -239,44 +239,44 @@
               <span class="panel-avatar">MK</span>
               <div>
                 <strong>@creator</strong>
-                <span class="panel-meta">Fitness · France · 184K followers</span>
+                <span class="panel-meta">Fitness · France · 184K abonnés</span>
               </div>
             </div>
             <div class="panel-score">
-              <span class="panel-score-label">Reliability</span>
+              <span class="panel-score-label">Fiabilité</span>
               <span class="panel-score-val">72<small>/100</small></span>
             </div>
           </div>
 
           <div class="panel-gap">
-            <p class="panel-gap-title">Engagement rate</p>
+            <p class="panel-gap-title">Taux d'engagement</p>
             <div class="gaprow">
-              <span class="gaprow-label">Organic <small>28 posts</small></span>
+              <span class="gaprow-label">Organique <small>28 posts</small></span>
               <span class="gaprow-track"><i style="width:100%"></i></span>
-              <span class="gaprow-val">7.4%</span>
+              <span class="gaprow-val">7,4 %</span>
             </div>
             <div class="gaprow gaprow--paid">
-              <span class="gaprow-label">Sponsored <small>7 posts</small></span>
+              <span class="gaprow-label">Sponsorisé <small>7 posts</small></span>
               <span class="gaprow-track"><i style="width:42%"></i></span>
-              <span class="gaprow-val">3.1%</span>
+              <span class="gaprow-val">3,1 %</span>
             </div>
           </div>
 
           <p class="panel-verdict">
             <svg width="15" height="15"><use href="#i-gap" /></svg>
-            <span>Loses <strong>58%</strong> of its engagement when the post is
-            paid. Expect that drop on your own campaign.</span>
+            <span>Perd <strong>58 %</strong> de son engagement quand le post est
+            payé. Attendez-vous à la même chute sur votre campagne.</span>
           </p>
 
           <ul class="panel-rows">
-            <li><span>Fake-follower risk</span><b class="tag tag--ok">Low · 12%</b></li>
-            <li><span>vs Fitness creators</span><b class="tag tag--info">1.8× above</b></li>
-            <li><span>Posting cadence</span><b class="tag">4.2 / week</b></li>
-            <li><span>Based on</span><b class="tag">35 most recent posts</b></li>
+            <li><span>Risque de faux abonnés</span><b class="tag tag--ok">Faible · 12 %</b></li>
+            <li><span>vs créateurs Fitness</span><b class="tag tag--info">1,8× au-dessus</b></li>
+            <li><span>Rythme de publication</span><b class="tag">4,2 / semaine</b></li>
+            <li><span>Calculé sur</span><b class="tag">35 posts les plus récents</b></li>
           </ul>
 
         </div>
-        <figcaption>Illustration of a creator analysis. Figures are examples.</figcaption>
+        <figcaption>Illustration d'une analyse de créateur. Les chiffres sont des exemples.</figcaption>
       </figure>
 
     </div>
@@ -288,24 +288,25 @@
     <div class="wrap">
       <div class="split reveal">
         <div class="split-l">
-          <span class="eyebrow">The blind spot</span>
-          <h2>Every platform grades creators on their best unpaid work.</h2>
+          <span class="eyebrow">L'angle mort</span>
+          <h2>Toutes les plateformes notent les créateurs sur leur meilleur contenu non payé.</h2>
         </div>
         <div class="split-r">
           <p>
-            The engagement rate you are shown is almost always computed on a
-            creator's most popular posts — a showcase, ranked by performance,
-            sometimes spanning two years. Nothing in it was sponsored.
+            Le taux d'engagement qu'on vous montre est presque toujours calculé
+            sur les posts les plus populaires d'un créateur — une vitrine, classée
+            par performance, qui s'étale parfois sur deux ans. Rien dedans n'était
+            sponsorisé.
           </p>
           <p>
-            So you compare creators on the exact content that will never run for
-            you. Then the brief lands, the post goes out with a partnership
-            label, and the audience behaves differently.
+            Vous comparez donc les créateurs sur exactement le contenu qui ne
+            tournera jamais pour vous. Puis le brief arrive, le post sort avec une
+            mention de partenariat, et l'audience ne réagit plus pareil.
           </p>
           <p class="split-punch">
-            Revveal reads the <strong>35 most recent posts</strong>, in
-            chronological order, separates the paid ones from the organic ones,
-            and shows you the difference.
+            Revveal lit les <strong>35 posts les plus récents</strong>, dans
+            l'ordre chronologique, sépare les payés des organiques, et vous montre
+            l'écart.
           </p>
         </div>
       </div>
@@ -317,13 +318,13 @@
   <section class="section" id="difference">
     <div class="wrap">
       <header class="section-head reveal">
-        <span class="eyebrow">Why Revveal</span>
-        <h2>Built the opposite way to the usual platforms.</h2>
+        <span class="eyebrow">Pourquoi Revveal</span>
+        <h2>Construit à l'inverse des plateformes classiques.</h2>
         <p class="lede">
-          Influencer tooling is sold as a seat you rent by the month, across
-          every network at once, graded on public vanity metrics. Revveal is
-          one network, one campaign, one payment — and one metric the others
-          do not compute.
+          L'outillage influence se vend comme un siège qu'on loue au mois, sur
+          tous les réseaux à la fois, noté sur des métriques de façade. Revveal,
+          c'est un réseau, une campagne, un paiement — et une métrique que les
+          autres ne calculent pas.
         </p>
       </header>
 
@@ -331,98 +332,98 @@
         <div class="compare-head" role="presentation">
           <span class="compare-crit"></span>
           <span class="compare-us">Revveal</span>
-          <span class="compare-them">The usual platforms</span>
+          <span class="compare-them">Les plateformes classiques</span>
         </div>
 
         <div class="compare-row">
-          <span class="compare-crit">What you pay</span>
+          <span class="compare-crit">Ce que vous payez</span>
           <div class="compare-us">
             <svg class="ic-ok" width="17" height="17"><use href="#i-check" /></svg>
-            <p>One payment per campaign, from <b>39€</b>. Nothing recurring.</p>
+            <p>Un paiement par campagne, à partir de <b>39 €</b>. Rien de récurrent.</p>
           </div>
           <div class="compare-them">
             <svg class="ic-no" width="17" height="17"><use href="#i-dash" /></svg>
-            <p>A monthly or annual seat, typically a few hundred euros, billed between campaigns too.</p>
-          </div>
-        </div>
-
-        <div class="compare-row">
-          <span class="compare-crit">Commission on deals</span>
-          <div class="compare-us">
-            <svg class="ic-ok" width="17" height="17"><use href="#i-check" /></svg>
-            <p><b>0%.</b> You pay for the search and the analysis, never a cut of what you agree with a creator.</p>
-          </div>
-          <div class="compare-them">
-            <svg class="ic-no" width="17" height="17"><use href="#i-dash" /></svg>
-            <p>Some platforms take a percentage of the sponsorship itself, on top of the subscription.</p>
+            <p>Un siège mensuel ou annuel, souvent quelques centaines d'euros, facturé aussi entre deux campagnes.</p>
           </div>
         </div>
 
         <div class="compare-row">
-          <span class="compare-crit">Sponsored vs organic</span>
+          <span class="compare-crit">Commission sur les contrats</span>
           <div class="compare-us">
             <svg class="ic-ok" width="17" height="17"><use href="#i-check" /></svg>
-            <p>Measured on the creator's own paid posts, and stated as a percentage drop.</p>
+            <p><b>0 %.</b> Vous payez la recherche et l'analyse, jamais une part de ce que vous négociez avec un créateur.</p>
           </div>
           <div class="compare-them">
             <svg class="ic-no" width="17" height="17"><use href="#i-dash" /></svg>
-            <p>Generally not computed. One engagement rate, all posts mixed together.</p>
+            <p>Certaines plateformes prélèvent un pourcentage du sponsoring lui-même, en plus de l'abonnement.</p>
           </div>
         </div>
 
         <div class="compare-row">
-          <span class="compare-crit">What the stats read</span>
+          <span class="compare-crit">Sponsorisé vs organique</span>
           <div class="compare-us">
             <svg class="ic-ok" width="17" height="17"><use href="#i-check" /></svg>
-            <p>The 35 most recent posts, in date order. A real, current sample.</p>
+            <p>Mesuré sur les posts payés du créateur lui-même, et exprimé en pourcentage de chute.</p>
           </div>
           <div class="compare-them">
             <svg class="ic-no" width="17" height="17"><use href="#i-dash" /></svg>
-            <p>A top-posts showcase, ranked by popularity and biased toward the best of it.</p>
+            <p>En général pas calculé. Un seul taux d'engagement, tous les posts confondus.</p>
           </div>
         </div>
 
         <div class="compare-row">
-          <span class="compare-crit">Benchmark</span>
+          <span class="compare-crit">Base de calcul</span>
           <div class="compare-us">
             <svg class="ic-ok" width="17" height="17"><use href="#i-check" /></svg>
-            <p>Against creators in the same category, with the sample size shown.</p>
+            <p>Les 35 posts les plus récents, par date. Un échantillon réel et actuel.</p>
           </div>
           <div class="compare-them">
             <svg class="ic-no" width="17" height="17"><use href="#i-dash" /></svg>
-            <p>A global average with every niche pooled, so beauty is graded against gaming.</p>
+            <p>Une vitrine des meilleurs posts, classée par popularité et biaisée vers le haut.</p>
           </div>
         </div>
 
         <div class="compare-row">
-          <span class="compare-crit">Scope</span>
+          <span class="compare-crit">Référence</span>
           <div class="compare-us">
             <svg class="ic-ok" width="17" height="17"><use href="#i-check" /></svg>
-            <p>TikTok only, taken seriously: categories, keywords and scoring built for it.</p>
+            <p>Face aux créateurs de la même catégorie, avec la taille de l'échantillon affichée.</p>
           </div>
           <div class="compare-them">
             <svg class="ic-no" width="17" height="17"><use href="#i-dash" /></svg>
-            <p>Every network at once, with the depth spread thin across all of them.</p>
+            <p>Une moyenne globale toutes niches confondues, où la beauté est notée face au gaming.</p>
           </div>
         </div>
 
         <div class="compare-row">
-          <span class="compare-crit">Getting started</span>
+          <span class="compare-crit">Périmètre</span>
           <div class="compare-us">
             <svg class="ic-ok" width="17" height="17"><use href="#i-check" /></svg>
-            <p>Create a project, run a free campaign. No card, no call.</p>
+            <p>TikTok uniquement, pris au sérieux : catégories, mots-clés et scoring conçus pour lui.</p>
           </div>
           <div class="compare-them">
             <svg class="ic-no" width="17" height="17"><use href="#i-dash" /></svg>
-            <p>Demo request, sales call, custom quote before you see anything.</p>
+            <p>Tous les réseaux à la fois, avec la profondeur diluée sur chacun.</p>
+          </div>
+        </div>
+
+        <div class="compare-row">
+          <span class="compare-crit">Pour commencer</span>
+          <div class="compare-us">
+            <svg class="ic-ok" width="17" height="17"><use href="#i-check" /></svg>
+            <p>Créez un projet, lancez une campagne gratuite. Sans carte, sans appel.</p>
+          </div>
+          <div class="compare-them">
+            <svg class="ic-no" width="17" height="17"><use href="#i-dash" /></svg>
+            <p>Demande de démo, appel commercial, devis sur mesure avant d'avoir rien vu.</p>
           </div>
         </div>
       </div>
 
       <p class="compare-note reveal">
-        Comparison against the common shape of the category, not against any
-        named product. Features and prices elsewhere change; check them for
-        yourself before deciding.
+        Comparaison avec la forme habituelle du marché, et non avec un produit
+        nommé. Les fonctionnalités et les prix évoluent ailleurs ; vérifiez-les
+        vous-même avant de décider.
       </p>
     </div>
   </section>
@@ -432,49 +433,50 @@
   <section class="band" id="analysis">
     <div class="wrap">
       <header class="section-head reveal">
-        <span class="eyebrow">One creator, one analysis</span>
-        <h2>What opening a creator gives you.</h2>
+        <span class="eyebrow">Un créateur, une analyse</span>
+        <h2>Ce que débloque l'ouverture d'un créateur.</h2>
         <p class="lede">
-          Finding a creator is the easy half. Every plan comes with a budget of
-          detailed analyses — each one opens a full read of a single creator.
+          Trouver un créateur est la moitié facile. Chaque formule inclut un
+          budget d'analyses détaillées — chacune ouvre une lecture complète d'un
+          seul créateur.
         </p>
       </header>
 
       <div class="perks">
         <article class="perk reveal">
           <svg class="perk-ic" width="21" height="21"><use href="#i-gap" /></svg>
-          <h3>Sponsored vs organic gap</h3>
-          <p>How much engagement the creator loses the moment a post is paid, measured on their own sponsored content.</p>
+          <h3>Écart sponsorisé / organique</h3>
+          <p>Combien d'engagement le créateur perd dès qu'un post est payé, mesuré sur son propre contenu sponsorisé.</p>
         </article>
 
         <article class="perk reveal">
           <svg class="perk-ic" width="21" height="21"><use href="#i-shield" /></svg>
-          <h3>Fake-follower risk</h3>
-          <p>An inflation indicator built from engagement consistency and audience behaviour, so you spot bought reach before paying for it.</p>
+          <h3>Risque de faux abonnés</h3>
+          <p>Un indicateur de gonflage construit sur la régularité de l'engagement et le comportement de l'audience, pour repérer une audience achetée avant de la payer.</p>
         </article>
 
         <article class="perk reveal">
           <svg class="perk-ic" width="21" height="21"><use href="#i-gauge" /></svg>
-          <h3>Reliability score /100</h3>
-          <p>A single figure combining engagement, consistency and audience quality — benchmarked against creators in the same category.</p>
+          <h3>Score de fiabilité /100</h3>
+          <p>Un chiffre unique combinant engagement, régularité et qualité d'audience — comparé aux créateurs de la même catégorie.</p>
         </article>
 
         <article class="perk reveal">
           <svg class="perk-ic" width="21" height="21"><use href="#i-spark" /></svg>
-          <h3>Written insights</h3>
-          <p>Best-performing format, hashtags that actually work, momentum, posting cadence by median gap — stated in sentences, not left as charts to interpret.</p>
+          <h3>Analyses rédigées</h3>
+          <p>Meilleur format, hashtags qui fonctionnent vraiment, dynamique, rythme de publication en écart médian — formulés en phrases, pas laissés sous forme de graphiques à interpréter.</p>
         </article>
 
         <article class="perk reveal">
           <svg class="perk-ic" width="21" height="21"><use href="#i-video" /></svg>
-          <h3>Full post history</h3>
-          <p>Every recent post with its own numbers, over 7, 30 or 90 days, with a sponsored-only filter.</p>
+          <h3>Historique complet des posts</h3>
+          <p>Chaque post récent avec ses propres chiffres, sur 7, 30 ou 90 jours, avec un filtre sponsorisé.</p>
         </article>
 
         <article class="perk reveal">
           <svg class="perk-ic" width="21" height="21"><use href="#i-export" /></svg>
-          <h3>Export anything</h3>
-          <p>CSV or JSON, one creator or a whole shortlist. The data is yours to take into your own sheet.</p>
+          <h3>Export libre</h3>
+          <p>CSV ou JSON, un créateur ou une liste entière. Les données sont à vous, à emporter dans votre propre tableur.</p>
         </article>
       </div>
     </div>
@@ -485,33 +487,33 @@
   <section class="section" id="how">
     <div class="wrap">
       <header class="section-head reveal">
-        <span class="eyebrow">How it works</span>
-        <h2>Four steps, and the search runs without you.</h2>
+        <span class="eyebrow">Fonctionnement</span>
+        <h2>Quatre étapes, et la recherche tourne sans vous.</h2>
       </header>
 
       <ol class="steps">
         <li class="step reveal">
           <span class="step-n">01</span>
-          <h3>Describe the brand</h3>
-          <p>A category, a couple of sectors in your own words, a country and a language. That is the whole setup.</p>
+          <h3>Décrivez la marque</h3>
+          <p>Une catégorie, deux ou trois secteurs dans vos mots, un pays et une langue. C'est tout le paramétrage.</p>
           <svg class="step-ic" width="19" height="19"><use href="#i-target" /></svg>
         </li>
         <li class="step reveal">
           <span class="step-n">02</span>
-          <h3>Set a creator target</h3>
-          <p>Pick how many creators you want found — 300, 600 or 1000 — and pay once for that campaign.</p>
+          <h3>Fixez un objectif de créateurs</h3>
+          <p>Choisissez combien de créateurs vous voulez trouver — 300, 600 ou 1 000 — et payez une fois pour cette campagne.</p>
           <svg class="step-ic" width="19" height="19"><use href="#i-search" /></svg>
         </li>
         <li class="step reveal">
           <span class="step-n">03</span>
-          <h3>Results arrive as they land</h3>
-          <p>Revveal searches your sectors first, then widens with the category's own keyword set, and rejects creators too far from your niche instead of padding the count.</p>
+          <h3>Les résultats arrivent au fil de l'eau</h3>
+          <p>Revveal cherche d'abord sur vos secteurs, puis élargit avec le jeu de mots-clés de la catégorie, et rejette les créateurs trop éloignés de votre niche au lieu de gonfler le compteur.</p>
           <svg class="step-ic" width="19" height="19"><use href="#i-filter" /></svg>
         </li>
         <li class="step reveal">
           <span class="step-n">04</span>
-          <h3>Shortlist and analyse</h3>
-          <p>Filter, sort, mark creators saved, contacted, signed or declined on a board, and spend an analysis on the ones you are serious about.</p>
+          <h3>Présélectionnez et analysez</h3>
+          <p>Filtrez, triez, marquez les créateurs enregistré, contacté, signé ou refusé sur un tableau, et dépensez une analyse sur ceux qui vous intéressent vraiment.</p>
           <svg class="step-ic" width="19" height="19"><use href="#i-gauge" /></svg>
         </li>
       </ol>
@@ -523,12 +525,12 @@
   <section class="band" id="pricing">
     <div class="wrap">
       <header class="section-head reveal">
-        <span class="eyebrow">Pricing</span>
-        <h2>You pay for a campaign. Not for a month.</h2>
+        <span class="eyebrow">Tarifs</span>
+        <h2>Vous payez une campagne. Pas un mois.</h2>
         <p class="lede">
-          One payment, one campaign, a fixed number of creators found and a
-          fixed number of detailed analyses. Nothing renews. If you run one
-          campaign a quarter, you pay for one campaign a quarter.
+          Un paiement, une campagne, un nombre fixe de créateurs trouvés et un
+          nombre fixe d'analyses détaillées. Rien ne se renouvelle. Si vous lancez
+          une campagne par trimestre, vous payez une campagne par trimestre.
         </p>
       </header>
 
@@ -536,66 +538,66 @@
 
         <article class="plan reveal">
           <h3 class="plan-name">Starter</h3>
-          <p class="plan-price"><span class="plan-amount">39€</span><span class="plan-once">once</span></p>
-          <p class="plan-for">A first campaign, or a narrow niche.</p>
+          <p class="plan-price"><span class="plan-amount">39€</span><span class="plan-once">une fois</span></p>
+          <p class="plan-for">Une première campagne, ou une niche étroite.</p>
           <ul class="plan-list">
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>300</b> creators found</span></li>
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>210</b> detailed analyses</span></li>
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Filters, sorting, favourites board</span></li>
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>CSV and JSON export</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>300</b> créateurs trouvés</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>210</b> analyses détaillées</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Filtres, tri, tableau de favoris</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Export CSV et JSON</span></li>
           </ul>
-          <a href="./waitlist.html" class="btn btn--ghost btn--block">Join the waitlist</a>
+          <a href="./waitlist.html" class="btn btn--ghost btn--block">Rejoindre la liste</a>
         </article>
 
         <article class="plan plan--featured reveal">
-          <span class="plan-badge">Most popular</span>
+          <span class="plan-badge">Le plus choisi</span>
           <h3 class="plan-name">Growth</h3>
-          <p class="plan-price"><span class="plan-amount">89€</span><span class="plan-once">once</span></p>
-          <p class="plan-for">The standard campaign size for a brand or an agency client.</p>
+          <p class="plan-price"><span class="plan-amount">89€</span><span class="plan-once">une fois</span></p>
+          <p class="plan-for">La taille de campagne standard pour une marque ou un client d'agence.</p>
           <ul class="plan-list">
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>600</b> creators found</span></li>
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>420</b> detailed analyses</span></li>
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Filters, sorting, favourites board</span></li>
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>CSV and JSON export</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>600</b> créateurs trouvés</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>420</b> analyses détaillées</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Filtres, tri, tableau de favoris</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Export CSV et JSON</span></li>
           </ul>
-          <a href="./waitlist.html" class="btn btn--primary btn--block">Join the waitlist</a>
+          <a href="./waitlist.html" class="btn btn--primary btn--block">Rejoindre la liste</a>
         </article>
 
         <article class="plan reveal">
           <h3 class="plan-name">Pro</h3>
-          <p class="plan-price"><span class="plan-amount">139€</span><span class="plan-once">once</span></p>
-          <p class="plan-for">Broad niches, or several brands at once.</p>
+          <p class="plan-price"><span class="plan-amount">139€</span><span class="plan-once">une fois</span></p>
+          <p class="plan-for">Niches larges, ou plusieurs marques à la fois.</p>
           <ul class="plan-list">
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>1 000</b> creators found</span></li>
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>700</b> detailed analyses</span></li>
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Filters, sorting, favourites board</span></li>
-            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>CSV and JSON export</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>1 000</b> créateurs trouvés</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>700</b> analyses détaillées</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Filtres, tri, tableau de favoris</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Export CSV et JSON</span></li>
           </ul>
-          <a href="./waitlist.html" class="btn btn--ghost btn--block">Join the waitlist</a>
+          <a href="./waitlist.html" class="btn btn--ghost btn--block">Rejoindre la liste</a>
         </article>
 
       </div>
 
       <div class="plan-free reveal">
         <div>
-          <h3>Try it free, first</h3>
+          <h3>Essayez d'abord gratuitement</h3>
           <p>
-            One free campaign per project: <b>15 creators found</b> and
-            <b>5 detailed analyses</b>, no card, no call. Enough to judge the
-            sponsored-vs-organic gap on real creators in your own niche before
-            spending anything.
+            Une campagne gratuite par projet : <b>15 créateurs trouvés</b> et
+            <b>5 analyses détaillées</b>, sans carte, sans appel. De quoi juger
+            l'écart sponsorisé/organique sur de vrais créateurs de votre niche
+            avant de dépenser quoi que ce soit.
           </p>
         </div>
         <a href="./waitlist.html" class="btn btn--ghost">
-          Get it at launch
+          L'obtenir au lancement
           <svg class="arrow" width="16" height="16"><use href="#i-arrow" /></svg>
         </a>
       </div>
 
       <p class="pay-note reveal">
         <svg width="13" height="13"><use href="#i-lock" /></svg>
-        Payments will be handled by Lemon Squeezy as merchant of record. Card
-        details never reach us.
+        Les paiements seront traités par Lemon Squeezy en tant que vendeur de
+        référence. Vos coordonnées bancaires ne nous parviennent jamais.
       </p>
     </div>
   </section>
@@ -605,86 +607,87 @@
   <section class="section" id="faq">
     <div class="wrap">
       <header class="section-head reveal">
-        <span class="eyebrow">Straight answers</span>
-        <h2>The questions worth asking before you trust a number.</h2>
+        <span class="eyebrow">Réponses directes</span>
+        <h2>Les questions à poser avant de faire confiance à un chiffre.</h2>
       </header>
 
       <div class="faq reveal">
 
         <details class="qa">
-          <summary>How certain is the sponsored detection?</summary>
+          <summary>Quelle est la fiabilité de la détection des posts sponsorisés ?</summary>
           <div class="qa-body">
             <p>
-              Not fully certain, and we say so in the product. No TikTok data
-              source exposes a paid-partnership flag, so sponsored posts are
-              identified from the caption — disclosure tags, partnership
-              wording, brand mentions. Posts we are not sure about are labelled
-              <em>likely sponsored</em> rather than counted silently.
+              Pas totale, et nous le disons dans le produit. Aucune source de
+              données TikTok n'expose d'indicateur de partenariat rémunéré : les
+              posts sponsorisés sont identifies depuis la légende — mentions de
+              divulgation, formulations de partenariat, marques citées. Les posts
+              dont nous ne sommes pas sûrs sont étiquetés
+              <em>probablement sponsorisé</em> plutôt que comptés en silence.
             </p>
             <p>
-              It is the honest ceiling of the data available. We would rather
-              show you the limit than a confident number built on one.
-            </p>
-          </div>
-        </details>
-
-        <details class="qa">
-          <summary>Where does the creator data come from?</summary>
-          <div class="qa-body">
-            <p>
-              From public TikTok profile and post information, collected through
-              a third-party data provider. Usernames, bios, follower counts,
-              post statistics and public thumbnails — nothing private, no
-              messages, no email addresses, no private accounts.
+              C'est le plafond honnête de la donnee disponible. Nous préférons
+              vous montrer la limite qu'un chiffre assuré bâti dessus.
             </p>
           </div>
         </details>
 
         <details class="qa">
-          <summary>Is this really not a subscription?</summary>
+          <summary>D'où viennent les données créateurs ?</summary>
           <div class="qa-body">
             <p>
-              It is not. You create a campaign, you pay once for it, and that is
-              the end of the transaction. There is no seat, no renewal and no
-              minimum term. If you disappear for six months, you are charged
-              nothing in the meantime.
+              D'informations publiques de profils et de posts TikTok, collectées
+              via un fournisseur de données tiers. Pseudos, bios, nombres
+              d'abonnés, statistiques de posts et vignettes publiques — rien de
+              privé, pas de messages, pas d'adresses e-mail, pas de comptés privés.
             </p>
           </div>
         </details>
 
         <details class="qa">
-          <summary>What happens if my niche runs out of creators?</summary>
+          <summary>Ce n'est vraiment pas un abonnement ?</summary>
           <div class="qa-body">
             <p>
-              The campaign ends and tells you so plainly, with however many
-              creators it genuinely found. Some niches in some countries simply
-              do not hold a thousand relevant TikTok creators, and padding the
-              list with off-topic accounts to hit a number would waste your
-              analyses instead of your patience.
+              Non. Vous créez une campagne, vous la payez une fois, et la
+              transaction s'arrête la. Pas de siège, pas de renouvellement, pas de
+              durée minimale. Si vous disparaissez six mois, vous n'êtes facturé de
+              rien entre-temps.
             </p>
           </div>
         </details>
 
         <details class="qa">
-          <summary>Can I get in touch with the creators through Revveal?</summary>
+          <summary>Que se passe-t-il si ma niche est épuisée ?</summary>
           <div class="qa-body">
             <p>
-              No. Revveal gives you the profiles, the analysis and a link to
-              each creator's public TikTok page; outreach happens on your side,
-              and the favourites board is there to track it — saved, contacted,
-              signed, declined.
+              La campagne s'arrête et vous le dit clairement, avec le nombre de
+              créateurs réellement trouvés. Certaines niches, dans certains pays,
+              ne contiennent tout simplement pas mille créateurs TikTok pertinents
+              — et gonfler la liste avec des comptés hors sujet pour atteindre un
+              chiffre gaspillerait vos analyses plutôt que votre patience.
             </p>
           </div>
         </details>
 
         <details class="qa">
-          <summary>I am a creator. Can I be removed?</summary>
+          <summary>Puis-je contacter les créateurs depuis Revveal ?</summary>
           <div class="qa-body">
             <p>
-              Yes. Email <a href="mailto:contact@revveal.net">contact@revveal.net</a>
-              from an address that lets us verify the account is yours, and your
-              record is deleted from the database. See the
-              <a href="./privacy.html#creators">Privacy Policy</a> for the detail.
+              Non. Revveal vous donne les profils, l'analyse et un lien vers la
+              page TikTok publique de chaque créateur ; la prise de contact se fait
+              de votre côté, et le tableau de favoris est là pour la suivre —
+              enregistré, contacté, signé, refusé.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Je suis créateur. Puis-je etre retire ?</summary>
+          <div class="qa-body">
+            <p>
+              Oui. Écrivez à <a href="mailto:contact@revveal.net">contact@revveal.net</a>
+              depuis une adresse qui nous permet de vérifier que le compte est le
+              vôtre, et votre fiche est supprimée de la base. Voir la
+              <a href="./privacy.html#creators">Politique de confidentialité</a> pour le detail.
             </p>
           </div>
         </details>
@@ -698,14 +701,15 @@
   <section class="closing">
     <div class="wrap">
       <div class="closing-card reveal">
-        <span class="eyebrow">Launching soon</span>
-        <h2>Be on the list when it opens.</h2>
+        <span class="eyebrow">Lancement imminent</span>
+        <h2>Soyez sur la liste à l'ouverture.</h2>
         <p>
-          We will email you once, when Revveal is live, with the free campaign
-          ready on your account. No newsletter, no drip sequence.
+          Nous vous écrirons une fois, quand Revveal sera en ligne, avec la
+          campagne gratuite prête sur votre compte. Pas de newsletter, pas de
+          séquence automatique.
         </p>
         <a href="./waitlist.html" class="btn btn--primary btn--lg">
-          Join the waitlist
+          Rejoindre la liste d'attente
           <svg class="arrow" width="16" height="16"><use href="#i-arrow" /></svg>
         </a>
       </div>
@@ -720,29 +724,29 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="./index.html" class="brand" aria-label="Revveal, back to home">
+        <a href="./index.html" class="brand" aria-label="Revveal, retour à l'accueil">
           <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
           <span class="brand-name">Re<i>vv</i>eal</span>
         </a>
-        <p>Creator intelligence for TikTok campaigns. One payment, one campaign, no subscription.</p>
+        <p>Intelligence créateurs pour vos campagnes TikTok. Un paiement, une campagne, sans abonnement.</p>
       </div>
 
       <div class="footer-col">
-        <h4>Product</h4>
+        <h4>Produit</h4>
         <ul>
-          <li><a href="#difference">Why Revveal</a></li>
-          <li><a href="#analysis">The analysis</a></li>
-          <li><a href="#how">How it works</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#difference">Pourquoi Revveal</a></li>
+          <li><a href="#analysis">L'analyse</a></li>
+          <li><a href="#how">Fonctionnement</a></li>
+          <li><a href="#pricing">Tarifs</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Legal</h4>
+        <h4>Légal</h4>
         <ul>
-          <li><a href="./terms.html">Terms of Service</a></li>
-          <li><a href="./privacy.html">Privacy Policy</a></li>
-          <li><a href="./privacy.html#creators">Creator removal</a></li>
+          <li><a href="./terms.html">Conditions d'utilisation</a></li>
+          <li><a href="./privacy.html">Politique de confidentialité</a></li>
+          <li><a href="./privacy.html#creators">Retrait créateur</a></li>
         </ul>
       </div>
 
@@ -750,13 +754,13 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="mailto:contact@revveal.net">contact@revveal.net</a></li>
-          <li><a href="./waitlist.html">Join the waitlist</a></li>
+          <li><a href="./waitlist.html">Rejoindre la liste d'attente</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-base">
-      <span>© <span id="year">2026</span> Revveal · Arthur Werts, sole trader, France</span>
+      <span>© <span id="year">2026</span> Revveal · Arthur Werts, entrepreneur individuel, France</span>
       <span class="mono">revveal.net</span>
     </div>
   </div>
