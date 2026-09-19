@@ -59,7 +59,26 @@
 
 .hero-copy .eyebrow { margin-bottom: 1.5rem; }
 .hero-copy h1 { margin-bottom: 1.5rem; }
-.hero-copy .lede { margin-bottom: 2.25rem; }
+.hero-copy .lede { margin-bottom: 1.25rem; }
+
+/* A qui la page s'adresse. Absent jusqu'au 2026-09-19 : le visiteur
+   devait deviner s'il etait la cible, ce qui est pourtant la premiere
+   question qu'il se pose. Une ligne, sous l'accroche, avant les boutons. */
+.hero-for {
+  margin-bottom: 2rem;
+  font-size: 0.9375rem;
+  color: var(--text-2);
+}
+.hero-for::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  margin-right: 0.6rem;
+  vertical-align: -1px;
+  border-radius: 2px;
+  background: var(--accent);
+}
 
 .hero-actions {
   display: flex;
