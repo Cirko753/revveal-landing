@@ -70,10 +70,17 @@
       <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
       <span class="brand-name">Re<i>vv</i>eal</span>
     </a>
-    <nav class="lang-switch" aria-label="Language">
-      <a href="./thank-you.html" hreflang="en" lang="en" aria-current="true">EN</a>
-      <a href="./fr/thank-you.html" hreflang="fr" lang="fr">FR</a>
-    </nav>
+    <details class="lang">
+      <summary aria-label="Language : English">
+        <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18Z"/></svg>
+        <span>EN</span>
+        <svg class="lang-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 7 7 7-7"/></svg>
+      </summary>
+      <ul class="lang-menu">
+        <li><a href="./thank-you.html" hreflang="en" lang="en" aria-current="true">English</a></li>
+        <li><a href="./fr/thank-you.html" hreflang="fr" lang="fr">Français</a></li>
+      </ul>
+    </details>
   </div>
 </header>
 
@@ -117,6 +124,8 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script src="./lang.js" defer></script>
 
 </body>
 </html>

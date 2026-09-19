@@ -233,38 +233,87 @@ a { color: inherit; }
 .nav-end { display: flex; align-items: center; gap: 1.25rem; }
 
 /* ── Selecteur de langue ────────────────────────────────────
-   Deux liens, pas un <select> : ce sont deux URL distinctes que
-   l'on doit pouvoir ouvrir dans un onglet, copier, et que Google
-   doit pouvoir suivre. Un menu deroulant pilote en JS ne serait
-   explorable par aucun des deux.
+   Un <details> et non deux liens cote a cote : la liste est
+   appelee a s'allonger, et un segment par langue devient
+   illisible des la troisieme. Ajouter une langue = ajouter un
+   <a> dans le menu, rien d'autre.
 
-   Volontairement discret — c'est un utilitaire, pas un argument
-   de vente. Il ne doit jamais rivaliser avec l'appel a l'action
-   qui le suit dans la barre. */
-.lang-switch {
+   <details> plutot qu'un menu maison : l'ouverture, la
+   fermeture, le clavier et l'etat sont natifs, et le menu
+   fonctionne meme sans JavaScript. lang.js n'ajoute que ce que
+   l'element ne fait pas seul — fermer au clic exterieur et a
+   Echap.
+
+   Les entrees restent de vrais <a href> presents dans le HTML :
+   ce sont des URL distinctes, elles doivent pouvoir etre
+   ouvertes dans un onglet, copiees, et suivies par un moteur.
+   Un menu dont les destinations seraient construites en JS ne
+   serait explorable par aucun des deux. */
+.lang { position: relative; flex: none; }
+
+.lang > summary {
   display: inline-flex;
   align-items: center;
-  gap: 1px;
-  padding: 2px;
+  gap: 0.35rem;
+  padding: 0.4rem 0.5rem;
   border: 1px solid var(--line);
   border-radius: 8px;
-  flex: none;
-}
-.lang-switch a {
-  display: block;
-  padding: 0.28rem 0.5rem;
-  border-radius: 6px;
   font-family: var(--mono);
   font-size: 0.6875rem;
   letter-spacing: 0.06em;
   color: var(--text-3);
-  text-decoration: none;
-  transition: color 0.18s ease, background 0.18s ease;
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.18s ease, border-color 0.18s ease;
 }
-.lang-switch a:hover { color: var(--text); }
-.lang-switch a[aria-current] {
-  background: hsl(0 0% 100% / 0.07);
-  color: var(--text);
+.lang > summary::-webkit-details-marker { display: none; }
+.lang > summary::marker { content: ''; }
+.lang > summary:hover,
+.lang[open] > summary { color: var(--text); border-color: var(--line-strong); }
+
+.lang-globe { width: 14px; height: 14px; }
+.lang-chev  { width: 9px; height: 9px; opacity: 0.7; transition: transform 0.18s ease; }
+.lang[open] .lang-chev { transform: rotate(180deg); }
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 7px);
+  right: 0;
+  z-index: 20;
+  min-width: 11rem;
+  padding: 0.3rem;
+  margin: 0;
+  list-style: none;
+  background: var(--surface-sunk);
+  border: 1px solid var(--line-strong);
+  border-radius: 11px;
+  box-shadow: 0 18px 40px -16px rgb(0 0 0 / 0.7);
+}
+.lang-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  /* 40px de haut : c'est une cible tactile, pas une ligne de texte. */
+  padding: 0.6rem 0.65rem;
+  border-radius: 7px;
+  font-size: 0.875rem;
+  color: var(--text-2);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.lang-menu a:hover { background: hsl(0 0% 100% / 0.07); color: var(--text); }
+.lang-menu a[aria-current] { color: var(--text); }
+/* Pastille plutot qu'une coche : pas d'icone a charger, et le repere
+   reste lisible a cote d'un nom de langue dans n'importe quel alphabet. */
+.lang-menu a[aria-current]::after {
+  content: '';
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 /* ── Boutons ────────────────────────────────────────────────
@@ -416,7 +465,8 @@ a { color: inherit; }
   .nav-mail { display: none; }
   .nav-end { gap: 0.55rem; }
   .nav .wrap { gap: 0.55rem; }
-  .lang-switch a { padding: 0.28rem 0.35rem; }
+  .lang > summary { padding: 0.4rem 0.4rem; }
+  .lang-chev { display: none; }
   .nav .btn--sm { padding: 0.5rem 0.7rem; }
   .brand { gap: 0.4rem; }
   .brand-mark { width: 20px; height: 20px; margin-top: 1px; }
