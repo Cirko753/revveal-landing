@@ -138,15 +138,6 @@
           required
         />
 
-        <!-- Piege a robots. Masque a l'ecran ET aux lecteurs d'ecran
-             (aria-hidden + tabindex -1), donc invisible pour un humain ;
-             un robot qui remplit tous les champs le renseigne et
-             join-waitlist ignore l'envoi. Pas de display:none : certains
-             robots sautent justement les champs ainsi caches. -->
-        <div class="wl-trap" aria-hidden="true">
-          <label for="company">Company</label>
-          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
-        </div>
 
         <p class="wl-error" id="wl-error" role="alert" hidden></p>
 
@@ -177,78 +168,35 @@
 
 <script>
   /* ------------------------------------------------------------------
-     Inscription a la liste d'attente.
+     Liste d'attente : ABANDONNEE le 2026-09-23, choix du proprietaire.
 
-     Passe par l'Edge Function `join-waitlist` du projet Supabase, et non
-     par une insertion directe : la table `waitlist` est en RLS sans
-     policy (deny-all), donc personne ne peut ni la lire ni y ecrire
-     depuis un navigateur. La fonction est deployee avec verify_jwt a
-     false, ce qui evite d'embarquer une cle Supabase dans ce HTML.
+     L'Edge Function `join-waitlist` et la table `waitlist` ont ete
+     supprimees. Le formulaire garde son comportement visible (validation
+     de l'adresse, puis page de remerciement) mais n'envoie plus RIEN :
+     l'adresse ne quitte pas le navigateur. La version branchee, avec son
+     champ piege a robots, est dans l'historique git (commit 25a363d).
 
-     La reponse est volontairement la meme pour une adresse nouvelle et
-     pour une adresse deja inscrite : l'endpoint ne doit pas permettre de
-     tester qui figure sur la liste.
-
-     ⚠️ Avant, le formulaire partait en GET vers thank-you.html : rien
-     n'etait enregistre nulle part, et l'adresse du visiteur se retrouvait
-     dans l'URL, donc dans son historique et dans les journaux du serveur.
+     ⚠️ Ne pas revenir a un GET vers thank-you.html avec l'adresse en
+     parametre : elle finirait dans l'URL, donc dans l'historique du
+     visiteur et dans les journaux du serveur.
   ------------------------------------------------------------------ */
-  const WAITLIST_ENDPOINT =
-    'https://hmmrkwfjhvaolpdfexew.supabase.co/functions/v1/join-waitlist';
-
   const form    = document.getElementById('wl-form');
   const input   = document.getElementById('email');
-  const trap    = document.getElementById('company');
-  const submit  = document.getElementById('wl-submit');
   const errorEl = document.getElementById('wl-error');
-  const submitLabel = submit.innerHTML;
 
-  function showError(html) {
-    errorEl.innerHTML = html;
-    errorEl.hidden = false;
-  }
-
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     errorEl.hidden = true;
 
     const email = input.value.trim();
     if (!email || !input.checkValidity()) {
-      showError('Enter a valid email address.');
+      errorEl.textContent = 'Enter a valid email address.';
+      errorEl.hidden = false;
       input.focus();
       return;
     }
 
-    submit.disabled = true;
-    submit.textContent = 'Adding you…';
-
-    try {
-      const res = await fetch(WAITLIST_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, company: trap.value }),
-      });
-
-      if (res.ok) {
-        // Redirection sans parametre : l'adresse ne doit pas transiter
-        // par l'URL de la page de confirmation.
-        location.href = './thank-you.html';
-        return;
-      }
-
-      // 400 = adresse refusee par la fonction, message affichable tel quel.
-      let message = '';
-      try { message = (await res.json()).error || ''; } catch { /* corps vide */ }
-      throw new Error(message);
-    } catch (err) {
-      submit.disabled = false;
-      submit.innerHTML = submitLabel;
-      showError(
-        (err && err.message) ||
-        'Something went wrong on our side. Try again, or write to ' +
-        '<a href="mailto:contact@revveal.net?subject=Waitlist">contact@revveal.net</a>.'
-      );
-    }
+    location.href = './thank-you.html';
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
