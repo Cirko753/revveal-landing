@@ -12,11 +12,11 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.revveal.net/" />
 
-  <!-- Canonique sur www : l'apex revveal.net n'a AUCUN enregistrement
-       DNS au 2026-09-18, il ne resout pas. Pointer la canonique dessus
-       reviendrait a dire a Google que la version de reference de cette
-       page se trouve a une adresse qui n'existe pas. A basculer sur
-       l'apex le jour ou il est ajoute dans Vercel, pas avant. -->
+  <!-- Canonique sur www, sans extension .html (2026-09-26, passage sur
+       Cloudflare Workers) : Cloudflare sert /terms et redirige /terms.html
+       vers /terms, et l'apex revveal.net redirige vers www (regle de
+       redirection Cloudflare). Une canonique en .html ou sur l'apex
+       designerait donc une adresse qui redirige. -->
   <link rel="canonical" href="https://www.revveal.net/" />
 
   <!-- Paires de langue. Reciproques et obligatoirement completes :

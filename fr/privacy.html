@@ -8,26 +8,26 @@
   <meta name="theme-color" content="#1e2029" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Canonique sur www : l'apex revveal.net n'a AUCUN enregistrement
-       DNS au 2026-09-18, il ne resout pas. Pointer la canonique dessus
-       reviendrait a dire a Google que la version de reference de cette
-       page se trouve a une adresse qui n'existe pas. A basculer sur
-       l'apex le jour ou il est ajoute dans Vercel, pas avant. -->
-  <link rel="canonical" href="https://www.revveal.net/fr/privacy.html" />
+  <!-- Canonique sur www, sans extension .html (2026-09-26, passage sur
+       Cloudflare Workers) : Cloudflare sert /terms et redirige /terms.html
+       vers /terms, et l'apex revveal.net redirige vers www (regle de
+       redirection Cloudflare). Une canonique en .html ou sur l'apex
+       designerait donc une adresse qui redirige. -->
+  <link rel="canonical" href="https://www.revveal.net/fr/privacy" />
 
   <!-- Paires de langue. Reciproques et obligatoirement completes :
        chaque version se declare ELLE-MEME en plus de son alternative,
        sinon Google ignore tout le groupe. x-default pointe sur
        l'anglais, qui est la version par defaut du site. -->
-  <link rel="alternate" hreflang="en" href="https://www.revveal.net/privacy.html" />
-  <link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/privacy.html" />
-  <link rel="alternate" hreflang="x-default" href="https://www.revveal.net/privacy.html" />
+  <link rel="alternate" hreflang="en" href="https://www.revveal.net/privacy" />
+  <link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/privacy" />
+  <link rel="alternate" hreflang="x-default" href="https://www.revveal.net/privacy" />
 
 
   <meta property="og:title" content="Politique de confidentialité — Revveal" />
   <meta property="og:description" content="Comment Revveal traite les données personnelles — pour les utilisateurs du service et pour les créateurs TikTok dont les données publiques y figurent." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.revveal.net/fr/privacy.html" />
+  <meta property="og:url" content="https://www.revveal.net/fr/privacy" />
   <meta property="og:site_name" content="Revveal" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:locale:alternate" content="en_GB" />

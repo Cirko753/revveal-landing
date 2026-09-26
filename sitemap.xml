@@ -28,38 +28,38 @@
   </url>
 
   <url>
-    <loc>https://www.revveal.net/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/terms.html"/>
+    <loc>https://www.revveal.net/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/terms"/>
     <lastmod>2026-09-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.revveal.net/fr/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/terms.html"/>
+    <loc>https://www.revveal.net/fr/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/terms"/>
     <lastmod>2026-09-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://www.revveal.net/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/privacy.html"/>
+    <loc>https://www.revveal.net/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/privacy"/>
     <lastmod>2026-09-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.revveal.net/fr/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/privacy.html"/>
+    <loc>https://www.revveal.net/fr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/privacy"/>
     <lastmod>2026-09-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
