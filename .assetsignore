@@ -1,0 +1,11 @@
+# Fichiers du depot qui ne doivent PAS etre publies sur le site : la racine du
+# depot est le dossier servi (voir wrangler.jsonc), donc tout ce qui n'est pas
+# liste ici devient une page publique.
+.git
+.gitignore
+.assetsignore
+.wrangler
+.dev.vars*
+wrangler.jsonc
+node_modules
+README.md

@@ -1,0 +1,3 @@
+# Etat local de `wrangler dev` (Cloudflare Workers).
+.wrangler
+.dev.vars*

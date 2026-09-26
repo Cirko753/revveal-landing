@@ -1,0 +1,23 @@
+// Hébergement de la landing sur Cloudflare Workers — assets statiques seuls,
+// aucun script Worker (décision du 2026-09-26 : migration depuis Vercel).
+//
+// Workers Builds (Cloudflare relié à ce dépôt GitHub) lance `npx wrangler
+// deploy` à chaque push sur main. Pas de commande de build : le site est
+// déjà du HTML statique, servi tel quel depuis la racine du dépôt.
+//
+// ⚠️ `name` doit être EXACTEMENT le nom du Worker créé dans le dashboard
+// Cloudflare, sinon le build échoue.
+//
+// ⚠️ Cloudflare sert les pages SANS extension : /terms.html répond par une
+// redirection 307 vers /terms (comportement par défaut, `html_handling`
+// « auto-trailing-slash »). Les dossiers gardent leur barre finale (/fr/).
+{
+  "name": "revveal-landing",
+  // Sans effet sur un Worker sans script. Date choisie pour rester lisible
+  // par un wrangler local sous Node 20.
+  "compatibility_date": "2026-05-01",
+  "assets": {
+    // La racine du dépôt : tout y est public, sauf ce que liste .assetsignore.
+    "directory": "."
+  }
+}
