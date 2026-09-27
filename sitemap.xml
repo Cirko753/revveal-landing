@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Seules les pages indexables figurent ici. waitlist.html et
-     thank-you.html sont en noindex : les lister serait se contredire.
+<!-- Seules les pages indexables figurent ici. L'application
+     (app.revveal.net) n'y figure pas : c'est un autre domaine, et
+     tout y est derriere une authentification.
 
      Chaque URL declare le groupe de langue COMPLET, elle-meme incluse.
      Une entree qui n'annoncerait que son alternative serait ignoree par
@@ -13,7 +14,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/"/>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -22,7 +23,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/"/>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -32,7 +33,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/terms"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/terms"/>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -41,7 +42,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/terms"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/terms"/>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -51,7 +52,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/privacy"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/privacy"/>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -60,7 +61,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/privacy"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/privacy"/>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
