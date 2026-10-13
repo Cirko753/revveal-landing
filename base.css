@@ -24,7 +24,10 @@
 
   /* --- Accent. Le violet de l'app, et lui seul. --- */
   --accent:       hsl(253 100% 66%);
-  --accent-soft:  hsl(236 90% 70%);
+  /* 73 % et non 70 % (audit du 2026-10-13) : a 70 % le texte tombait a
+     4,34:1 sur le fond, sous le minimum de 4,5. Meme valeur que
+     --selected-second-color dans src/styles/var.css de l'app. */
+  --accent-soft:  hsl(236 90% 73%);
   --accent-wash:  hsl(253 100% 66% / 0.10);
   --accent-line:  hsl(253 100% 66% / 0.38);
 
@@ -394,7 +397,7 @@ a { color: inherit; }
   max-width: 30ch;
   line-height: 1.6;
 }
-.footer-col h4 {
+.footer-title {
   font-family: var(--mono);
   font-size: 0.6875rem;
   font-weight: 500;
