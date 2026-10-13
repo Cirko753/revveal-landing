@@ -1,0 +1,62 @@
+/* ============================================================
+   pricing.css — page tarifs
+   ------------------------------------------------------------
+   S'ajoute a index.css, dont elle reprend les cartes de prix, la
+   grille a filets (.perks), la FAQ et l'appel final : la page
+   tarifs doit lire exactement comme la section du meme nom sur
+   l'accueil. Seul ce qui n'existe pas la-bas vit ici.
+   ============================================================ */
+
+/* Pas de hero : la page commence par son titre, sous la barre fixe. */
+.page-top { padding-top: calc(64px + clamp(3rem, 6vw, 4.75rem)); }
+.page-top h1 { font-size: clamp(2.1rem, 4.4vw, 3.1rem); margin-bottom: 1.1rem; }
+
+.nav-links a[aria-current="page"] { color: var(--text); }
+
+/* Sur cette page, nom de formule et titre de l'essai sont des h2 (la
+   page a son h1) ; ils gardent la taille des h3 de l'accueil. */
+.plan-free h2 { font-size: 1.0625rem; letter-spacing: -0.015em; margin-bottom: 0.4rem; }
+
+/* ── Ce que vous payez ──────────────────────────────────────── */
+.units {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.unit {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.6rem;
+  background: hsl(0 0% 100% / 0.015);
+}
+/* L'analyse est ce qui distingue Revveal : bordure accentuee, comme le
+   palier mis en avant, et rien de plus. */
+.unit--accent { border-color: var(--accent-line); background: var(--accent-wash); }
+.unit-ic { color: var(--accent-soft); margin-bottom: 1.1rem; }
+.unit h3 { margin-bottom: 0.5rem; }
+.unit > p { font-size: 0.875rem; line-height: 1.65; color: var(--text-3); }
+.unit-list { list-style: none; display: grid; gap: 0.65rem; margin-top: 1.25rem; }
+.unit-list li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.875rem; line-height: 1.55; color: var(--text-2); }
+.unit-list svg { color: var(--accent-soft); margin-top: 3px; }
+
+.units-note {
+  margin-top: 1.25rem;
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: var(--text-3);
+  max-width: 70ch;
+}
+
+/* ── Quelle formule ─────────────────────────────────────────── */
+.perk h3 { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.perk-price {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--accent-soft);
+  letter-spacing: 0;
+}
+
+@media (max-width: 760px) {
+  .units { grid-template-columns: 1fr; }
+}

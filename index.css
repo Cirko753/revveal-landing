@@ -159,6 +159,13 @@
   line-height: 1.2;
 }
 .panel-score-val small { font-size: 0.8125rem; font-weight: 400; color: var(--text-3); }
+/* Meme couleur que la barre sponsorisee : le score EST ce que la barre
+   orange montre, en un chiffre. */
+.panel-score-val--warn { color: var(--warn); }
+/* « of organic » sous le chiffre : sur la meme ligne, « 51 % de
+   l'organique » prenait 133px et repliait la ligne du compte sur trois
+   lignes a 375px. */
+.panel-score-val--warn small { display: block; font-size: 0.6875rem; line-height: 1.3; }
 
 /* Deux barres horizontales appariees dans un meme cadre plutot
    que deux cartes empilees : la comparaison est le sujet du
@@ -251,6 +258,7 @@
 }
 .tag--ok   { color: var(--ok);   background: hsl(146 58% 49% / 0.13); }
 .tag--info { color: var(--info); background: hsl(216 52% 65% / 0.14); }
+.tag--warn { color: var(--warn); background: hsl(36 80% 53% / 0.13); }
 
 .hero-panel figcaption {
   margin-top: 0.85rem;
@@ -287,6 +295,49 @@
   color: var(--text) !important;
 }
 .split-punch strong { font-weight: 600; }
+
+/* Le chiffre de niche. Trois cellules a filets, comme .perks, plutot
+   que trois cartes : ce sont trois lectures d'un meme echantillon, pas
+   trois arguments separes. Le troisieme chiffre est en vert parce qu'il
+   dit l'inverse des deux premiers — c'est lui qui justifie de mesurer
+   createur par createur. */
+.niche { margin-top: clamp(3rem, 6vw, 4.5rem); }
+.niche-head {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+}
+.niche-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.niche-stat { background: var(--bg-deep); padding: 1.5rem 1.6rem; }
+.niche-val {
+  display: block;
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--warn);
+  margin-bottom: 0.5rem;
+}
+.niche-val--ok { color: var(--ok); }
+.niche-stat p { font-size: 0.875rem; line-height: 1.6; color: var(--text-2); }
+.niche-note {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--text-3);
+  max-width: 78ch;
+}
 
 
 /* ══ COMPARAISON ════════════════════════════════════════════ */
@@ -502,11 +553,32 @@
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  margin-top: 1.5rem;
   font-size: 0.75rem;
   color: var(--text-3);
 }
 .pay-note svg { color: var(--text-3); }
+
+/* Note de paiement a gauche, lien vers la page tarifs a droite ; les
+   deux passent l'un sous l'autre quand la ligne ne suffit plus. */
+.plans-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.plans-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  color: var(--accent-soft);
+  text-decoration: none;
+}
+.plans-more:hover { color: var(--text); }
+.plans-more .arrow { transition: transform 0.18s ease; }
+.plans-more:hover .arrow { transform: translateX(2px); }
 
 
 /* ══ QUESTIONS ══════════════════════════════════════════════ */
@@ -661,6 +733,13 @@
   }
   .compare-row .compare-us::before   { content: 'Revveal'; color: var(--accent-soft); }
   .compare-row .compare-them::before { content: 'The usual platforms'; color: var(--text-3); }
+  /* La page francaise affichait l'etiquette anglaise sur mobile
+     jusqu'au 2026-10-13 : le texte vit dans la feuille, pas dans la page. */
+  :lang(fr) .compare-row .compare-them::before { content: 'Les plateformes classiques'; }
+}
+
+@media (max-width: 760px) {
+  .niche-stats { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {

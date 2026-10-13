@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing — Revveal</title>
+  <meta name="description" content="Revveal pricing: one payment per campaign. Starter 49€ (300 creators, 210 analyses), Growth 89€ (600, 420), Pro 139€ (1,000, 700). No subscription, no commission, free trial without a card." />
+  <meta name="theme-color" content="#1e2029" />
+
+  <meta property="og:title" content="Pricing — Revveal" />
+  <meta property="og:description" content="One payment per campaign, from 49€. No subscription, no commission on your deals, nothing that renews." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.revveal.net/pricing" />
+  <meta property="og:site_name" content="Revveal" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:image" content="https://www.revveal.net/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Revveal — an engagement rate nobody paid for tells you nothing." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Canonique sans .html, comme les autres pages (Cloudflare sert /pricing
+       et redirige /pricing.html). Paires de langue reciproques et completes. -->
+  <link rel="canonical" href="https://www.revveal.net/pricing" />
+  <link rel="alternate" hreflang="en" href="https://www.revveal.net/pricing" />
+  <link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/pricing" />
+  <link rel="alternate" hreflang="x-default" href="https://www.revveal.net/pricing" />
+
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Pas de donnees structurees `offers` ici, pour la meme raison que sur
+       l'accueil : tant que l'inscription est fermee (auth-gate), le produit
+       ne s'achete pas, et une offre balisee serait fausse. -->
+
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./pricing.css" />
+</head>
+
+<body>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="i-logo" viewBox="0 0 32 32">
+    <path fill="currentColor" fill-rule="evenodd"
+          d="M1.5 4.5 H9.5 L16 16.2 L22.5 4.5 H30.5 L16 30 Z M11.6 4.5 H20.4 L16 12.4 Z"/>
+  </symbol>
+  <symbol id="i-gap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 20h18" /><path d="M6 20V9" /><path d="M12 20V5" /><path d="M18 20v-7" /><path d="M6 5.5h6" stroke-dasharray="2 2" />
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="6.5" /><path d="M20 20l-4.4-4.4" />
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 12.5 9.5 17.5 19.5 6.5" />
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h13" /><path d="M13 6.5 18.5 12 13 17.5" />
+  </symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="5" y="10.5" width="14" height="9.5" rx="2" /><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" />
+  </symbol>
+</svg>
+
+
+<!-- ══ NAVIGATION ══════════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="./index.html" class="brand" aria-label="Revveal, back to home">
+      <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
+      <span class="brand-name">Re<i>vv</i>eal</span>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="./index.html#difference">Why Revveal</a></li>
+        <li><a href="./index.html#analysis">The analysis</a></li>
+        <li><a href="./index.html#how">How it works</a></li>
+        <li><a href="./pricing.html" aria-current="page">Pricing</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-end">
+      <details class="lang">
+        <summary aria-label="Language : English">
+          <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18Z"/></svg>
+          <span>EN</span>
+          <svg class="lang-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 7 7 7-7"/></svg>
+        </summary>
+        <ul class="lang-menu">
+          <li><a href="./pricing.html" hreflang="en" lang="en" aria-current="true">English</a></li>
+          <li><a href="./fr/pricing.html" hreflang="fr" lang="fr">Français</a></li>
+        </ul>
+      </details>
+      <a href="mailto:contact@revveal.net" class="nav-mail">Contact</a>
+      <a href="https://app.revveal.net" class="btn btn--primary btn--sm">Start free</a>
+    </div>
+  </div>
+</header>
+
+
+<main>
+
+  <!-- ══ LES FORMULES ══════════════════════════════════════ -->
+  <!-- Memes cartes que l'accueil, au mot pres : deux formulations du
+       meme prix sur deux pages finissent toujours par diverger. Toute
+       modification se fait dans les QUATRE pages (accueil et tarifs, EN
+       et FR). Les prix decident cote serveur dans PAID_TIERS
+       (supabase/functions/_shared/tiers.ts du depot de l'app). -->
+  <section class="section page-top">
+    <div class="wrap">
+      <header class="section-head">
+        <span class="eyebrow">Pricing</span>
+        <h1>One payment per campaign. Nothing after it.</h1>
+        <p class="lede">
+          Choose how many creators you need. Every plan includes detailed
+          analyses for 70% of them. No subscription, no commission on your
+          deals, nothing that renews.
+        </p>
+      </header>
+
+      <div class="plans">
+
+        <article class="plan reveal">
+          <h2 class="plan-name">Starter</h2>
+          <p class="plan-price"><span class="plan-amount">49€</span><span class="plan-once">once</span></p>
+          <p class="plan-for">A first campaign, or a narrow niche.</p>
+          <ul class="plan-list">
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>300</b> creators found</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>210</b> detailed analyses</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Filters, sorting, favourites board</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>CSV and JSON export</span></li>
+          </ul>
+          <a href="https://app.revveal.net" class="btn btn--ghost btn--block">Start free</a>
+        </article>
+
+        <article class="plan plan--featured reveal">
+          <span class="plan-badge">Best value</span>
+          <h2 class="plan-name">Growth</h2>
+          <p class="plan-price"><span class="plan-amount">89€</span><span class="plan-once">once</span></p>
+          <p class="plan-for">The usual size of a brand campaign: a wide shortlist, every candidate checked.</p>
+          <ul class="plan-list">
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>600</b> creators found</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>420</b> detailed analyses</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Filters, sorting, favourites board</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>CSV and JSON export</span></li>
+          </ul>
+          <a href="https://app.revveal.net" class="btn btn--primary btn--block">Start free</a>
+        </article>
+
+        <article class="plan reveal">
+          <h2 class="plan-name">Pro</h2>
+          <p class="plan-price"><span class="plan-amount">139€</span><span class="plan-once">once</span></p>
+          <p class="plan-for">The whole field of a broad niche, before a big launch.</p>
+          <ul class="plan-list">
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>1,000</b> creators found</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span><b>700</b> detailed analyses</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>Filters, sorting, favourites board</span></li>
+            <li><svg width="15" height="15"><use href="#i-check" /></svg><span>CSV and JSON export</span></li>
+          </ul>
+          <a href="https://app.revveal.net" class="btn btn--ghost btn--block">Start free</a>
+        </article>
+
+      </div>
+
+      <div class="plan-free reveal">
+        <div>
+          <h2>Try it free, first</h2>
+          <p>
+            One free campaign per project: <b>15 creators found</b>,
+            <b>5 detailed analyses</b>. No card, no call. Creators who already
+            publish sponsored posts come first, so you see the gap on your own
+            niche before you spend a euro.
+          </p>
+        </div>
+        <a href="https://app.revveal.net" class="btn btn--ghost">
+          Create your free account
+          <svg class="arrow" width="16" height="16"><use href="#i-arrow" /></svg>
+        </a>
+      </div>
+
+      <div class="plans-foot reveal">
+        <p class="pay-note">
+          <svg width="13" height="13"><use href="#i-lock" /></svg>
+          Secure card payment by Mollie. Your card details never reach us.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ CE QUE VOUS PAYEZ ═════════════════════════════════ -->
+  <section class="band" id="units">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="eyebrow">What you pay for</span>
+        <h2>Creators found, and creators analysed.</h2>
+        <p class="lede">
+          The list is for shortlisting. The analyses are for deciding who you
+          pay.
+        </p>
+      </header>
+
+      <div class="units">
+        <article class="unit reveal">
+          <svg class="unit-ic" width="21" height="21"><use href="#i-search" /></svg>
+          <h3>A creator found</h3>
+          <p>A TikTok creator who matches your brand's category, sectors and country, ranked by fit.</p>
+          <ul class="unit-list">
+            <li><svg width="14" height="14"><use href="#i-check" /></svg><span>Followers, engagement rate, average views, total likes</span></li>
+            <li><svg width="14" height="14"><use href="#i-check" /></svg><span>Category, and the hashtags they actually use</span></li>
+            <li><svg width="14" height="14"><use href="#i-check" /></svg><span>Filters and sorting on those numbers</span></li>
+            <li><svg width="14" height="14"><use href="#i-check" /></svg><span>Favourites board: saved, contacted, signed, declined</span></li>
+            <li><svg width="14" height="14"><use href="#i-check" /></svg><span>Link to their TikTok page, CSV or JSON export</span></li>
+          </ul>
+        </article>
+
+        <article class="unit unit--accent reveal">
+          <svg class="unit-ic" width="21" height="21"><use href="#i-gap" /></svg>
+          <h3>A detailed analysis</h3>
+          <p>One creator opened in full, read from their 35 latest posts in date order.</p>
+          <ul class="unit-list">
+            <li><svg width="14" height="14"><use href="#i-check" /></svg><span>Sponsored vs organic gap, on views and on engagement</span></li>
+            <li><svg width="14" height="14"><use href="#i-check" /></svg><span>Fake-follower risk</span></li>
+            <li><svg width="14" height="14"><use href="#i-check" /></svg><span>Reliability score /100, against creators in the same category</span></li>
+            <li><svg width="14" height="14"><use href="#i-check" /></svg><span>Written insights: format, hashtags, momentum, real posting rhythm</span></li>
+            <li><svg width="14" height="14"><use href="#i-check" /></svg><span>Every recent post with its own numbers, sponsored-only filter</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="units-note reveal">
+        Analyses cover 70% of the creators found. Most creators are ruled out on
+        the numbers the list already shows, so the analyses go to the ones still
+        standing.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ══ QUELLE FORMULE ════════════════════════════════════ -->
+  <section class="section" id="choose">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="eyebrow">Choosing</span>
+        <h2>Which plan fits your campaign?</h2>
+      </header>
+
+      <div class="perks">
+        <article class="perk reveal">
+          <h3>Starter <span class="perk-price">49€</span></h3>
+          <p>A first paid campaign, or a narrow niche where 300 relevant creators is already most of the field. 210 analyses is more than most shortlists need.</p>
+        </article>
+        <article class="perk reveal">
+          <h3>Growth <span class="perk-price">89€</span></h3>
+          <p>A typical product launch. Enough creators for a wide shortlist, and enough analyses to check every candidate before you sign anyone.</p>
+        </article>
+        <article class="perk reveal">
+          <h3>Pro <span class="perk-price">139€</span></h3>
+          <p>Mapping a whole niche before a big launch. In French beauty, the Revveal base holds enough creators to fill all three plans.</p>
+        </article>
+      </div>
+
+      <p class="units-note reveal">
+        Not sure? The purchase window shows how many creators your niche holds
+        before you choose, and greys out any plan it cannot fill.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ══ QUESTIONS ═════════════════════════════════════════ -->
+  <!-- Aucune promesse de remboursement ici : retiree volontairement de
+       l'app le 2026-09-13, elle ne revient pas sur le site sans l'accord
+       d'Arthur. Les mentions de TVA suivent vatMention() de mollie-webhook. -->
+  <section class="band" id="faq">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="eyebrow">Pricing questions</span>
+        <h2>Before you pay.</h2>
+      </header>
+
+      <div class="faq reveal">
+
+        <details class="qa">
+          <summary>Is this really not a subscription?</summary>
+          <div class="qa-body">
+            <p>
+              No. You create a campaign, you pay for it once, and that is the end
+              of it. No seat, no renewal, no minimum term. Disappear for six months
+              and you pay nothing in the meantime.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Is VAT added on top?</summary>
+          <div class="qa-body">
+            <p>
+              No. Revveal is run by a French sole trader under the VAT franchise
+              scheme (article 293 B of the French tax code): no VAT is charged,
+              so the price shown is the price you pay.
+            </p>
+            <p>
+              If your business is in another EU country, reverse charge applies,
+              which is why checkout asks for your VAT number.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Will I get an invoice?</summary>
+          <div class="qa-body">
+            <p>
+              Yes. An invoice in your company's name is emailed to you once the
+              payment goes through. That is why checkout asks for your company
+              name, address and registration or VAT number.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>How do I pay?</summary>
+          <div class="qa-body">
+            <p>
+              By card, on a secure Mollie payment page. Your card details never
+              reach us.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>What if my niche cannot fill a plan?</summary>
+          <div class="qa-body">
+            <p>
+              You see it before you pay. The purchase window shows how many
+              creators match your brand, and greys out any plan it cannot fill.
+              Padding the list with off-topic accounts to reach a number would
+              waste your analyses.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>What does the free trial include?</summary>
+          <div class="qa-body">
+            <p>
+              One free campaign per project: 15 creators and 5 detailed analyses,
+              without a card. Creators who already publish sponsored posts come
+              first, so the analyses have something to measure. Up to three free
+              trials per person over 30 days.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Can I run several campaigns?</summary>
+          <div class="qa-body">
+            <p>
+              Yes. A project is one brand; each project holds up to five
+              campaigns, and an account up to three projects. Each campaign is
+              paid on its own.
+            </p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ APPEL FINAL ═══════════════════════════════════════ -->
+  <section class="closing">
+    <div class="wrap">
+      <div class="closing-card reveal">
+        <span class="eyebrow">Get started</span>
+        <h2>See the gap on creators from your own niche.</h2>
+        <p>
+          Create an account, describe your brand, and get 15 creators with 5
+          full analyses — no card, no call. If the gap they show changes who
+          you would have paid, buy a campaign.
+        </p>
+        <a href="https://app.revveal.net" class="btn btn--primary btn--lg">
+          Start free
+          <svg class="arrow" width="16" height="16"><use href="#i-arrow" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ══ PIED DE PAGE ════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="./index.html" class="brand" aria-label="Revveal, back to home">
+          <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
+          <span class="brand-name">Re<i>vv</i>eal</span>
+        </a>
+        <p>TikTok creator analytics for beauty brands. One payment, one campaign, no subscription.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="./index.html#difference">Why Revveal</a></li>
+          <li><a href="./index.html#analysis">The analysis</a></li>
+          <li><a href="./index.html#how">How it works</a></li>
+          <li><a href="./pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="./terms.html">Terms of Service</a></li>
+          <li><a href="./privacy.html">Privacy Policy</a></li>
+          <li><a href="./privacy.html#creators">Creator removal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@revveal.net">contact@revveal.net</a></li>
+          <li><a href="tel:+33978368004">+33 9 78 36 80 04</a></li>
+          <li><a href="https://app.revveal.net">Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-base">
+      <span>© <span id="year">2026</span> Revveal · Arthur Werts, sole trader (EI) · SIREN 106 106 206 · 13 rue de Clamart, 92100 Boulogne-Billancourt, France</span>
+      <span class="mono">revveal.net</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+  onScroll();
+  addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-visible');
+      obs.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script src="./lang.js" defer></script>
+
+</body>
+</html>
