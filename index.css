@@ -28,7 +28,7 @@
 /* ══ HERO ═══════════════════════════════════════════════════ */
 .hero {
   position: relative;
-  padding: calc(64px + clamp(3.25rem, 7vw, 5.75rem)) 0 clamp(4rem, 8vw, 6.5rem);
+  padding: calc(64px + clamp(2rem, 3.5vw, 3.25rem)) 0 clamp(4rem, 8vw, 6.5rem);
   overflow: hidden;
 }
 
@@ -52,20 +52,25 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
   gap: clamp(2.75rem, 5vw, 4.5rem);
   align-items: center;
 }
 
-.hero-copy .eyebrow { margin-bottom: 1.5rem; }
-.hero-copy h1 { margin-bottom: 1.5rem; }
-.hero-copy .lede { margin-bottom: 1.25rem; }
+.hero-copy .eyebrow { margin-bottom: 1rem; }
+/* Plus petit que le h1 de base (4.1rem) : le titre francais faisait
+   5 lignes de 64px, et le bouton principal tombait a 778px en
+   1280x720 et 789px en 1366x768, hors de l'ecran des portables les
+   plus courants (audit du 2026-10-13). Objectif : bouton entier dans
+   les ~657px utiles d'un navigateur sur un ecran 1366x768. */
+.hero-copy h1 { margin-bottom: 1.1rem; font-size: clamp(2.35rem, 3.9vw, 3.25rem); }
+.hero-copy .lede { margin-bottom: 1.1rem; }
 
 /* A qui la page s'adresse. Absent jusqu'au 2026-09-19 : le visiteur
    devait deviner s'il etait la cible, ce qui est pourtant la premiere
    question qu'il se pose. Une ligne, sous l'accroche, avant les boutons. */
 .hero-for {
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
   font-size: 0.9375rem;
   color: var(--text-2);
 }
@@ -757,4 +762,7 @@
 
   .plan-free { flex-direction: column; align-items: flex-start; }
   .plan-free .btn { width: 100%; }
+
+  /* Cible tactile de 44px (22px avant l'audit du 2026-10-13). */
+  .plans-more { min-height: 44px; }
 }

@@ -232,6 +232,22 @@ a { color: inherit; }
 
 .nav-end { display: flex; align-items: center; gap: 1.25rem; }
 
+/* Le seul lien de section garde quand la barre se replie : sur
+   mobile la page fait une quinzaine d'ecrans, et les tarifs sont la
+   question qu'on se pose avant de s'inscrire. Masque tant que les
+   liens de section sont visibles (voir la regle a 880px). */
+.nav-short {
+  display: none;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.875rem;
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+.nav-short:hover,
+.nav-short[aria-current] { color: var(--text); }
+
 /* ── Selecteur de langue ────────────────────────────────────
    Un <details> et non deux liens cote a cote : la liste est
    appelee a s'allonger, et un segment par langue devient
@@ -445,8 +461,14 @@ a { color: inherit; }
   .footer-brand { grid-column: 1 / -1; }
 }
 
-@media (max-width: 720px) {
+/* Les liens de section disparaissent sous 880px, et non 720 : en
+   francais (« Pourquoi Revveal », « Fonctionnement »…) la barre
+   debordait de 95px a 721px, 50px a 768px et 20px a 800px, rognant
+   le bouton « Commencer » sur iPad en portrait (audit du 2026-10-13).
+   Le debordement etait invisible : body masque l'overflow horizontal. */
+@media (max-width: 880px) {
   .nav-links { display: none; }
+  .nav-short { display: inline-flex; }
 }
 
 /* Sous 560px il ne reste que la marque et l'appel a l'action, et il
@@ -465,12 +487,27 @@ a { color: inherit; }
   .nav-mail { display: none; }
   .nav-end { gap: 0.55rem; }
   .nav .wrap { gap: 0.55rem; }
-  .lang > summary { padding: 0.4rem 0.4rem; }
+  .lang > summary { padding: 0.4rem 0.4rem; min-height: 44px; }
   .lang-chev { display: none; }
-  .nav .btn--sm { padding: 0.5rem 0.7rem; }
+  .nav .btn--sm { padding: 0.5rem 0.7rem; min-height: 44px; }
+
+  /* Cibles tactiles de 44px minimum (audit du 2026-10-13 : les liens
+     du pied de page faisaient 19px de haut). L'ecart de la liste
+     tombe a zero, la hauteur de chaque lien fait l'espacement. */
+  .footer-col ul { gap: 0; }
+  .footer-col a { display: inline-flex; align-items: center; min-height: 44px; }
+  .brand { min-height: 44px; }
+  .lang-menu a { min-height: 44px; }
   .brand { gap: 0.4rem; }
   .brand-mark { width: 20px; height: 20px; margin-top: 1px; }
   .brand-name { font-size: 1.3125rem; }
+}
+
+/* Sous 360px (iPhone SE de premiere generation) la barre ne tient plus
+   avec le lien « Tarifs » : il deborderait de 30 a 40px. On le retire
+   la, plutot que le selecteur de langue ou le bouton. */
+@media (max-width: 359px) {
+  .nav-short { display: none; }
 }
 
 @media (max-width: 520px) {
