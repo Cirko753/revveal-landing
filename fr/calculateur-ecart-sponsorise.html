@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculateur d'écart sponsorisé TikTok, gratuit — Revveal</title>
+  <meta name="description" content="Un créateur TikTok performe-t-il encore quand le post est sponsorisé ? Entrez les chiffres de quelques posts sponsorisés et habituels : le calculateur gratuit donne l'écart de vues et d'engagement, sans inscription." />
+  <meta name="theme-color" content="#1e2029" />
+
+  <meta property="og:title" content="Calculateur d'écart sponsorisé TikTok — Revveal" />
+  <meta property="og:description" content="Comparez les posts sponsorisés d'un créateur TikTok à ses posts habituels : vues, engagement, verdict. Gratuit, sans inscription." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.revveal.net/fr/calculateur-ecart-sponsorise" />
+  <meta property="og:site_name" content="Revveal" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:image" content="https://www.revveal.net/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Revveal — un taux d'engagement que personne n'a payé ne vous apprend rien." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Slug francais pour la recherche en francais, slug anglais pour
+       l'anglais : les paires hreflang n'exigent pas le meme chemin. -->
+  <link rel="canonical" href="https://www.revveal.net/fr/calculateur-ecart-sponsorise" />
+  <link rel="alternate" hreflang="en" href="https://www.revveal.net/sponsored-gap-calculator" />
+  <link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/calculateur-ecart-sponsorise" />
+  <link rel="alternate" hreflang="x-default" href="https://www.revveal.net/sponsored-gap-calculator" />
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="stylesheet" href="../base.css" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../pricing.css" />
+  <link rel="stylesheet" href="../calculator.css" />
+</head>
+
+<body>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="i-logo" viewBox="0 0 32 32">
+    <path fill="currentColor" fill-rule="evenodd"
+          d="M1.5 4.5 H9.5 L16 16.2 L22.5 4.5 H30.5 L16 30 Z M11.6 4.5 H20.4 L16 12.4 Z"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h13" /><path d="M13 6.5 18.5 12 13 17.5" />
+  </symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="5" y="10.5" width="14" height="9.5" rx="2" /><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" />
+  </symbol>
+</svg>
+
+
+<!-- ══ NAVIGATION ══════════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="./index.html" class="brand" aria-label="Revveal, retour à l'accueil">
+      <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
+      <span class="brand-name">Re<i>vv</i>eal</span>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="./index.html#difference">Pourquoi Revveal</a></li>
+        <li><a href="./index.html#analysis">L'analyse</a></li>
+        <li><a href="./index.html#how">Fonctionnement</a></li>
+        <li><a href="./pricing.html">Tarifs</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-end">
+      <a href="./pricing.html" class="nav-short">Tarifs</a>
+      <details class="lang">
+        <summary aria-label="Langue : Français">
+          <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18Z"/></svg>
+          <span>FR</span>
+          <svg class="lang-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 7 7 7-7"/></svg>
+        </summary>
+        <ul class="lang-menu">
+          <li><a href="../sponsored-gap-calculator.html" hreflang="en" lang="en">English</a></li>
+          <li><a href="./calculateur-ecart-sponsorise.html" hreflang="fr" lang="fr" aria-current="true">Français</a></li>
+        </ul>
+      </details>
+      <a href="mailto:contact@revveal.net" class="nav-mail">Contact</a>
+      <a href="https://app.revveal.net" class="btn btn--primary btn--sm">Commencer</a>
+    </div>
+  </div>
+</header>
+
+
+<main>
+
+  <!-- ══ CALCULATEUR ═══════════════════════════════════════ -->
+  <section class="section page-top">
+    <div class="wrap">
+      <header class="section-head">
+        <span class="eyebrow">Outil gratuit</span>
+        <h1>Calculateur d'écart sponsorisé TikTok</h1>
+        <p class="lede">
+          Un créateur performe-t-il encore quand le post est payé ? Entrez les
+          chiffres de quelques-uns de ses posts sponsorisés et de ses posts
+          habituels : vous voyez ce que son audience perd, ou garde, avant de
+          lui confier votre budget.
+        </p>
+      </header>
+
+      <div class="calc" id="calc">
+
+        <div class="calc-form">
+          <div class="calc-tools">
+            <button type="button" class="btn btn--ghost btn--sm" data-example>Remplir avec un exemple</button>
+            <button type="button" class="btn btn--quiet btn--sm" data-clear>Tout effacer</button>
+            <p>L'exemple est fictif.</p>
+          </div>
+
+          <div class="calc-group calc-group--paid" data-group="sponsored">
+            <h2>Posts sponsorisés</h2>
+            <p class="calc-hint">Mention « Publicité » ou « Partenariat rémunéré », #ad, #collab, code promo dans la légende. 2 posts minimum, idéalement 3 à 5.</p>
+            <div class="calc-scroll">
+              <table class="calc-table"><thead><tr></tr></thead><tbody></tbody></table>
+            </div>
+            <div class="calc-rows">
+              <button type="button" data-add>+ Ajouter un post</button>
+              <button type="button" data-remove>Retirer le dernier</button>
+            </div>
+          </div>
+
+          <div class="calc-group" data-group="organic">
+            <h2>Posts habituels</h2>
+            <p class="calc-hint">Des posts non sponsorisés publiés à la même période : comparer à un post vieux de deux ans mesure la croissance du compte, pas le créateur.</p>
+            <div class="calc-scroll">
+              <table class="calc-table"><thead><tr></tr></thead><tbody></tbody></table>
+            </div>
+            <div class="calc-rows">
+              <button type="button" data-add>+ Ajouter un post</button>
+              <button type="button" data-remove>Retirer le dernier</button>
+            </div>
+          </div>
+
+          <p class="calc-private">
+            <svg aria-hidden="true" width="14" height="14"><use href="#i-lock" /></svg>
+            Tout se calcule dans votre navigateur : aucun chiffre n'est envoyé.
+          </p>
+          <noscript><p class="calc-hint">Le calculateur a besoin de JavaScript.</p></noscript>
+        </div>
+
+        <aside class="calc-result">
+          <div class="panel">
+            <div class="panel-head">
+              <strong>Résultat</strong>
+              <span class="tag">Vues · Engagement</span>
+            </div>
+            <div data-result aria-live="polite"></div>
+          </div>
+
+          <div class="calc-next">
+            <p>
+              Revveal fait ce calcul pour vous sur les 35 derniers posts de
+              chaque créateur, repère les posts sponsorisés dans leurs légendes,
+              et l'applique à toute une liste de créateurs de votre niche.
+            </p>
+            <a href="https://app.revveal.net" class="btn btn--primary btn--block">
+              L'essayer sur votre niche
+              <svg aria-hidden="true" class="arrow" width="16" height="16"><use href="#i-arrow" /></svg>
+            </a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ MODE D'EMPLOI ═════════════════════════════════════ -->
+  <section class="band" id="howto">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="eyebrow">Mode d'emploi</span>
+        <h2>Trois minutes sur le profil du créateur.</h2>
+      </header>
+
+      <ol class="howto">
+        <li class="reveal">
+          <h3>Repérez ses posts sponsorisés</h3>
+          <p>En France, un post payé doit porter la mention « Publicité » ou « Collaboration commerciale ». Cherchez aussi #ad, #collab, #partenariat ou un code promo dans la légende.</p>
+        </li>
+        <li class="reveal">
+          <h3>Relevez les chiffres de chaque post</h3>
+          <p>Les vues s'affichent sur la vignette du profil. J'aime, commentaires, enregistrements et partages sont dans la colonne d'icônes, à droite de la vidéo. « 12,3 k » se tape tel quel.</p>
+        </li>
+        <li class="reveal">
+          <h3>Ajoutez des posts habituels de la même période</h3>
+          <p>Prenez des posts non sponsorisés publiés autour des mêmes dates. Le résultat s'affiche dès deux posts de chaque côté.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ══ QUESTIONS ═════════════════════════════════════════ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="eyebrow">Questions</span>
+        <h2>Comment le calcul fonctionne.</h2>
+      </header>
+
+      <div class="faq reveal">
+
+        <details class="qa">
+          <summary>Qu'est-ce que l'écart sponsorisé ?</summary>
+          <div class="qa-body">
+            <p>
+              C'est la différence entre ce que font les posts sponsorisés d'un
+              créateur et ce que font ses posts habituels. Un taux d'engagement
+              global mélange tous les posts, et les meilleurs le tirent vers le
+              haut. Ce qui compte pour une marque, c'est ce qui se passe quand
+              le post est payé.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Comment le résultat est-il calculé ?</summary>
+          <div class="qa-body">
+            <p>
+              Deux mesures, comparées entre posts sponsorisés et posts
+              habituels : les vues par post, en médiane, et l'engagement par
+              post (j'aime, commentaires, partages et enregistrements divisés
+              par les vues), en moyenne. Le pourcentage affiché est la moyenne
+              des deux rapports : une marque achète de la portée et de
+              l'interaction, garder l'une en perdant l'autre n'est pas tenir.
+            </p>
+            <p>
+              Au-dessus de 85 %, les posts sponsorisés tiennent ; entre 60 et
+              85 %, la baisse est modérée ; en dessous de 60 %, elle est forte.
+              Ce sont les mêmes définitions et les mêmes seuils que dans
+              l'application Revveal.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Pourquoi la médiane pour les vues ?</summary>
+          <div class="qa-body">
+            <p>
+              Parce qu'un seul post devenu viral, d'un côté ou de l'autre,
+              suffirait sinon à retourner le verdict. La médiane garde le post
+              typique et ignore l'exception.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Combien de posts faut-il entrer ?</summary>
+          <div class="qa-body">
+            <p>
+              Deux de chaque côté au minimum, trois à cinq de préférence. Plus
+              il y a de posts, plus le résultat est solide : sur deux posts, un
+              mauvais jour suffit à fausser le chiffre. Dans l'application,
+              l'analyse lit les 35 derniers posts du créateur.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Que veut dire le repère de 46 % ?</summary>
+          <div class="qa-body">
+            <p>
+              En octobre 2026, Revveal a mesuré l'écart de 22 créateurs beauté
+              français qui publient des posts sponsorisés : en médiane, leur
+              engagement baisse de 46 % quand le post est sponsorisé, et 7 sur
+              22 font aussi bien ou mieux. C'est un repère pour la beauté en
+              France, sur un petit échantillon, pas une norme pour toutes les
+              niches.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Mes chiffres sont-ils envoyés quelque part ?</summary>
+          <div class="qa-body">
+            <p>
+              Non. Le calcul se fait entièrement dans votre navigateur. Rien de
+              ce que vous tapez n'est transmis ni enregistré, et il n'y a pas
+              d'inscription.
+            </p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ APPEL FINAL ═══════════════════════════════════════ -->
+  <section class="closing">
+    <div class="wrap">
+      <div class="closing-card reveal">
+        <span class="eyebrow">Sur toute une liste</span>
+        <h2>Ne faites plus ce calcul à la main.</h2>
+        <p>
+          Décrivez votre marque : Revveal trouve les créateurs TikTok de votre
+          niche et mesure leur écart sponsorisé sur leurs 35 derniers posts.
+          L'essai est gratuit, sans carte.
+        </p>
+        <a href="https://app.revveal.net" class="btn btn--primary btn--lg">
+          Commencer
+          <svg aria-hidden="true" class="arrow" width="16" height="16"><use href="#i-arrow" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ══ PIED DE PAGE ════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="./index.html" class="brand" aria-label="Revveal, retour à l'accueil">
+          <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
+          <span class="brand-name">Re<i>vv</i>eal</span>
+        </a>
+        <p>L'analyse de créateurs TikTok pour les marques beauté. Un paiement, une campagne, sans abonnement.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Produit</p>
+        <ul>
+          <li><a href="./index.html#difference">Pourquoi Revveal</a></li>
+          <li><a href="./index.html#analysis">L'analyse</a></li>
+          <li><a href="./index.html#how">Fonctionnement</a></li>
+          <li><a href="./pricing.html">Tarifs</a></li>
+          <li><a href="./calculateur-ecart-sponsorise.html">Calculateur d'écart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Légal</p>
+        <ul>
+          <li><a href="./terms.html">Conditions d'utilisation</a></li>
+          <li><a href="./privacy.html">Politique de confidentialité</a></li>
+          <li><a href="./privacy.html#creators">Retrait créateur</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Contact</p>
+        <ul>
+          <li><a href="mailto:contact@revveal.net">contact@revveal.net</a></li>
+          <li><a href="https://app.revveal.net">Se connecter</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-base">
+      <span>© <span id="year">2026</span> Revveal · Arthur Werts, entrepreneur individuel (EI) · SIREN 106 106 206 · 13 rue de Clamart, 92100 Boulogne-Billancourt, France</span>
+      <span class="mono">revveal.net</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+  onScroll();
+  addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-visible');
+      obs.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script src="../calculator.js" defer></script>
+<script src="../lang.js" defer></script>
+
+</body>
+</html>

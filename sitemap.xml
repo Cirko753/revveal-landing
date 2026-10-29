@@ -48,6 +48,25 @@
   </url>
 
   <url>
+    <loc>https://www.revveal.net/sponsored-gap-calculator</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/sponsored-gap-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/calculateur-ecart-sponsorise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/sponsored-gap-calculator"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.revveal.net/fr/calculateur-ecart-sponsorise</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/sponsored-gap-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/calculateur-ecart-sponsorise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/sponsored-gap-calculator"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.revveal.net/terms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/terms"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/terms"/>

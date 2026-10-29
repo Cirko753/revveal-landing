@@ -343,6 +343,9 @@
   color: var(--text-3);
   max-width: 78ch;
 }
+/* Lien vers le calculateur d'ecart, sous la note : meme style que
+   « Voir le detail des tarifs », un lien et non un second bouton. */
+.niche-more { margin-top: 1.25rem; }
 
 
 /* ══ COMPARAISON ════════════════════════════════════════════ */
