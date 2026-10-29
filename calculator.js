@@ -4,18 +4,11 @@
    Tout se calcule dans le navigateur : aucun chiffre saisi n'est envoye
    nulle part (c'est ecrit sur la page, il faut que ce reste vrai).
 
-   Les definitions sont CELLES DE L'APP (summarizeSponsoredGap et
-   deriveMetrics dans src/component/result/CreatorPage.jsx du depot de
-   l'app) : vues en MEDIANE par groupe, engagement = (j'aime + commentaires
-   + partages + enregistrements) / vues, en MOYENNE par post ; score =
-   moyenne des deux rapports sponsorise / habituel ; seuils 0,85 et 0,6 de
-   ratioTone ; 2 posts minimum de chaque cote (MIN_SAMPLE_PER_GROUP).
-   Si l'app change une de ces regles, ce fichier doit suivre : sinon un
-   meme createur donnerait deux chiffres selon l'endroit ou on le mesure.
-
-   Le repere -46 % vient de l'etude Beauty France du 2026-10-12 (22
-   createurs, mediane de l'ecart d'engagement) : meme mesure que la ligne
-   « engagement » ici, donc comparable. */
+   Memes definitions que l'application : vues en mediane, engagement par
+   post en moyenne, score = moyenne des deux rapports, seuils 85 % et 60 %,
+   2 posts minimum de chaque cote. Si l'application change, ce fichier
+   suit, sinon un meme createur donnerait deux chiffres differents.
+   Le repere -46 % est le chiffre du barometre beaute France. */
 (() => {
   const root = document.getElementById('calc');
   if (!root) return;

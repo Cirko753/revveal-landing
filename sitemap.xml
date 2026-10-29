@@ -67,6 +67,44 @@
   </url>
 
   <url>
+    <loc>https://www.revveal.net/tiktok-beauty-barometer-france</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/tiktok-beauty-barometer-france"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/barometre-tiktok-beaute-france"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/tiktok-beauty-barometer-france"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.revveal.net/fr/barometre-tiktok-beaute-france</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/tiktok-beauty-barometer-france"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/barometre-tiktok-beaute-france"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/tiktok-beauty-barometer-france"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.revveal.net/methodology</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/methodology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/methode"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/methodology"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.revveal.net/fr/methode</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/methodology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/methode"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/methodology"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.revveal.net/terms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/terms"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/terms"/>

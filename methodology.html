@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Methodology: how Revveal measures a TikTok creator — Revveal</title>
+  <meta name="description" content="How Revveal spots a TikTok creator's sponsored posts and measures what their audience does when the post is paid: the gap calculation, a worked example, the other indicators and their limits." />
+  <meta name="theme-color" content="#1e2029" />
+
+  <meta property="og:title" content="Methodology — how Revveal measures a TikTok creator" />
+  <meta property="og:description" content="What Revveal measures, how to read it, and what the method can't tell." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.revveal.net/methodology" />
+  <meta property="og:site_name" content="Revveal" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:image" content="https://www.revveal.net/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Revveal — an engagement rate nobody paid for tells you nothing." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="canonical" href="https://www.revveal.net/methodology" />
+  <link rel="alternate" hreflang="en" href="https://www.revveal.net/methodology" />
+  <link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/methode" />
+  <link rel="alternate" hreflang="x-default" href="https://www.revveal.net/methodology" />
+
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Mirror of fr/methode.html, same level of detail: principles, the
+       gap calculation (already public in the calculator) and limits;
+       never internal settings (marker lists, weights, thresholds). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How Revveal measures a TikTok creator",
+    "inLanguage": "en",
+    "datePublished": "2026-10-29",
+    "dateModified": "2026-10-29",
+    "author": { "@type": "Organization", "name": "Revveal", "url": "https://www.revveal.net/" },
+    "publisher": { "@type": "Organization", "name": "Revveal", "logo": { "@type": "ImageObject", "url": "https://www.revveal.net/logo-512.png" } },
+    "mainEntityOfPage": "https://www.revveal.net/methodology"
+  }
+  </script>
+
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./legal.css" />
+  <link rel="stylesheet" href="./insights.css" />
+</head>
+
+<body>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="i-logo" viewBox="0 0 32 32">
+    <path fill="currentColor" fill-rule="evenodd"
+          d="M1.5 4.5 H9.5 L16 16.2 L22.5 4.5 H30.5 L16 30 Z M11.6 4.5 H20.4 L16 12.4 Z"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h13" /><path d="M13 6.5 18.5 12 13 17.5" />
+  </symbol>
+</svg>
+
+
+<!-- ══ NAVIGATION ══════════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="./index.html" class="brand" aria-label="Revveal, back to home">
+      <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
+      <span class="brand-name">Re<i>vv</i>eal</span>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="./index.html#difference">Why Revveal</a></li>
+        <li><a href="./index.html#analysis">The analysis</a></li>
+        <li><a href="./index.html#how">How it works</a></li>
+        <li><a href="./pricing.html">Pricing</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-end">
+      <a href="./pricing.html" class="nav-short">Pricing</a>
+      <details class="lang">
+        <summary aria-label="Language : English">
+          <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18Z"/></svg>
+          <span>EN</span>
+          <svg class="lang-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 7 7 7-7"/></svg>
+        </summary>
+        <ul class="lang-menu">
+          <li><a href="./methodology.html" hreflang="en" lang="en" aria-current="true">English</a></li>
+          <li><a href="./fr/methode.html" hreflang="fr" lang="fr">Français</a></li>
+        </ul>
+      </details>
+      <a href="mailto:contact@revveal.net" class="nav-mail">Contact</a>
+      <a href="https://app.revveal.net" class="btn btn--primary btn--sm">Start free</a>
+    </div>
+  </div>
+</header>
+
+
+<main>
+
+  <div class="legal-head">
+    <div class="wrap">
+      <span class="eyebrow">Methodology</span>
+      <h1>How Revveal measures a TikTok creator.</h1>
+      <p class="lede">
+        What Revveal measures, how to read it, and what the method can't tell. A
+        number whose origin you don't understand doesn't help you decide.
+      </p>
+      <p class="legal-meta" style="margin-top:1.25rem">
+        <span>Updated: 29 October 2026</span>
+        <a href="./sponsored-gap-calculator.html">Work out a creator's gap yourself</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="legal-body wrap">
+
+    <nav class="legal-toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#posts">The posts we read</a></li>
+        <li><a href="#detection">Spotting a sponsored post</a></li>
+        <li><a href="#gap">Computing the gap</a></li>
+        <li><a href="#example">A worked example</a></li>
+        <li><a href="#indicators">The other indicators</a></li>
+        <li><a href="#selection">How creators are picked</a></li>
+        <li><a href="#limits">What the method can't tell</a></li>
+        <li><a href="#data">Data and creators</a></li>
+      </ol>
+    </nav>
+
+    <article class="legal-article">
+
+      <h2 id="posts"><span class="n">01</span>The posts we read: the latest, not the best</h2>
+      <p>
+        An analysis reads the creator's <strong>latest posts</strong>, in the
+        order they were published. Not their most popular ones: a selection
+        ranked by views almost never contains sponsored content, and can span
+        years. Recent posts show what the creator publishes now, sponsored posts
+        included.
+      </p>
+      <p>
+        Among French beauty creators, those posts cover about ten months of
+        activity at the median. The creator page always shows the period
+        actually covered and the date of the reading, which can be run again for
+        fresher numbers.
+      </p>
+
+      <h2 id="detection"><span class="n">02</span>Spotting a sponsored post</h2>
+      <p>
+        No public TikTok data says whether a post was paid for. Revveal therefore
+        reads what the creator writes: the partnership mentions in their captions
+        and hashtags, such as #ad, “paid partnership”, a discount code, or the
+        French “Collaboration commerciale”, across the common languages.
+      </p>
+      <p>
+        Hashtags are matched word for word: #ad doesn't fire on #adventure, nor
+        #pub on #pubg. A post wrongly counted as sponsored would skew the
+        creator's whole gap.
+      </p>
+      <div class="legal-note">
+        <p>
+          The verdict reads “<strong>Likely sponsored</strong>”, never a
+          certainty. A paid post the creator doesn't flag in the caption goes
+          unnoticed.
+        </p>
+      </div>
+
+      <h2 id="gap"><span class="n">03</span>Computing the sponsored gap</h2>
+      <p>
+        Sponsored posts are compared with the organic posts <strong>of the same
+        creator, over the same period</strong>. Two measures:
+      </p>
+      <h3>Views, as a median</h3>
+      <p class="formula">sponsored views (median) ÷ organic views (median)</p>
+      <p>
+        The median rather than the mean: otherwise a single post that went viral,
+        on either side, would be enough to flip the verdict.
+      </p>
+      <h3>Engagement, as an average per post</h3>
+      <p class="formula">
+        a post's engagement = (likes + comments + shares + saves) ÷ views
+      </p>
+      <h3>The gap score</h3>
+      <p class="formula">score = average of the two ratios, sponsored ÷ organic</p>
+      <p>
+        Both count, because a brand buys reach and interaction: keeping one while
+        losing the other is not “holding up”. The score reads as a percentage of
+        organic performance:
+      </p>
+      <table class="legal-table">
+        <thead><tr><th>Score</th><th>Verdict shown</th></tr></thead>
+        <tbody>
+          <tr><td>100% and above</td><td>Sponsored posts outperform organic ones</td></tr>
+          <tr><td>85 to 100%</td><td>Sponsored posts hold up</td></tr>
+          <tr><td>60 to 85%</td><td>Moderate drop</td></tr>
+          <tr><td>Below 60%</td><td>Sharp drop</td></tr>
+        </tbody>
+      </table>
+      <p>
+        <strong>Not enough sponsored posts, no score.</strong> The page says
+        there isn't enough to go on rather than show a number no data supports.
+      </p>
+      <p>
+        Revveal also keeps track of the sponsored posts it has already seen for a
+        creator. When they fall within the period shown, they count towards the
+        gap, each compared with the organic posts <strong>of its own
+        time</strong>: a creator whose audience has doubled since doesn't seem to
+        collapse on sponsored posts.
+      </p>
+
+      <h2 id="example"><span class="n">04</span>A worked example</h2>
+      <p>
+        A French skincare creator with about 380,000 followers, analysed in
+        October 2026 (handle hidden), with 8 sponsored posts among her recent
+        ones:
+      </p>
+      <table class="legal-table">
+        <thead><tr><th>Measure</th><th>Organic</th><th>Sponsored</th><th>Ratio</th></tr></thead>
+        <tbody>
+          <tr><td>Views (median)</td><td class="num">99k</td><td class="num">45k</td><td class="num">0.45</td></tr>
+          <tr><td>Engagement (average)</td><td class="num">14.6%</td><td class="num">8.2%</td><td class="num">0.56</td></tr>
+        </tbody>
+      </table>
+      <p class="formula">score = (0.45 + 0.56) ÷ 2 ≈ 51%  <span>→ sharp drop</span></p>
+      <p>
+        On a sponsored post, this creator keeps about half of what she usually
+        does. Her overall engagement rate would have looked excellent.
+      </p>
+
+      <h2 id="indicators"><span class="n">05</span>The other indicators</h2>
+      <h3>The reliability score, out of 100</h3>
+      <p>
+        An overall marker, to compare creators at a glance. It combines the
+        creator's engagement <strong>against that of creators in the same
+        category</strong>, the quality of their audience, their fake follower
+        risk and how steady their views are. The comparison is made within the
+        category, with the sample size shown: a beauty engagement rate is not
+        judged like a gaming one.
+      </p>
+      <h3>Fake follower risk</h3>
+      <p>
+        An index built from signals found on inflated accounts: views out of line
+        with the follower count, engagement abnormally low for the audience,
+        comments that don't follow the likes, numbers too regular to be natural.
+        It is a set of clues, not proof of bought followers.
+      </p>
+      <h3>Audience quality</h3>
+      <p>
+        The share of viewers who do more than watch. Saves and shares count on
+        top of likes and comments: they say a piece of content was genuinely
+        useful.
+      </p>
+
+      <h2 id="selection"><span class="n">06</span>How creators are picked for a campaign</h2>
+      <p>
+        Revveal assigns each creator a category (beauty, fashion, fitness…) from
+        <strong>their own content</strong>: what they actually talk about, not
+        the word that found them. When nothing stands out clearly enough, the
+        creator stays “unclassified” rather than being misfiled.
+      </p>
+      <p>
+        A campaign only receives creators relevant to the brand. An off-topic
+        account is never added to reach a number: if the niche doesn't hold
+        enough creators, the purchase window says so before payment.
+      </p>
+
+      <h2 id="limits"><span class="n">07</span>What the method can't tell</h2>
+      <ul>
+        <li><strong>No official marker.</strong> Detection reads captions: an undisclosed partnership isn't seen.</li>
+        <li><strong>Few creators publish sponsored content.</strong> Among randomly drawn French beauty creators, only one in ten posted enough of it to measure a gap. For the others, the page says so.</li>
+        <li><strong>Public data only.</strong> No private account statistics.</li>
+        <li><strong>Clues, not guarantees.</strong> A past gap describes past campaigns; a different brief, product or format can change the outcome.</li>
+      </ul>
+      <p>
+        Internal settings (marker lists, weights, thresholds) evolve with the
+        database and are not detailed here.
+      </p>
+
+      <h2 id="data"><span class="n">08</span>Data and creators</h2>
+      <p>
+        Revveal only reads public content and never publishes a list or a profile
+        of any creator. A creator can ask to be removed from the database:
+        <a href="./privacy.html#creators">the steps are in the privacy policy</a>.
+      </p>
+
+      <div class="doc-cta">
+        <a href="https://app.revveal.net" class="btn btn--primary">
+          See these numbers on your niche
+          <svg aria-hidden="true" class="arrow" width="16" height="16"><use href="#i-arrow" /></svg>
+        </a>
+        <a href="./tiktok-beauty-barometer-france.html" class="btn btn--ghost">The beauty barometer</a>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+
+<!-- ══ FOOTER ══════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="./index.html" class="brand" aria-label="Revveal, back to home">
+          <svg class="brand-mark" aria-hidden="true"><use href="#i-logo" /></svg>
+          <span class="brand-name">Re<i>vv</i>eal</span>
+        </a>
+        <p>TikTok creator analytics for beauty brands. One payment, one campaign, no subscription.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Product</p>
+        <ul>
+          <li><a href="./index.html#difference">Why Revveal</a></li>
+          <li><a href="./index.html#analysis">The analysis</a></li>
+          <li><a href="./pricing.html">Pricing</a></li>
+          <li><a href="./sponsored-gap-calculator.html">Gap calculator</a></li>
+          <li><a href="./tiktok-beauty-barometer-france.html">Beauty barometer</a></li>
+          <li><a href="./methodology.html">Methodology</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Legal</p>
+        <ul>
+          <li><a href="./terms.html">Terms of Service</a></li>
+          <li><a href="./privacy.html">Privacy Policy</a></li>
+          <li><a href="./privacy.html#creators">Creator removal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-title">Contact</p>
+        <ul>
+          <li><a href="mailto:contact@revveal.net">contact@revveal.net</a></li>
+          <li><a href="https://app.revveal.net">Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-base">
+      <span>© <span id="year">2026</span> Revveal · Arthur Werts, sole trader (EI) · SIREN 106 106 206 · 13 rue de Clamart, 92100 Boulogne-Billancourt, France</span>
+      <span class="mono">revveal.net</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+  onScroll();
+  addEventListener('scroll', onScroll, { passive: true });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script src="./lang.js" defer></script>
+
+</body>
+</html>

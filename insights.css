@@ -1,0 +1,148 @@
+/* ============================================================
+   insights.css — pages « méthode » et « baromètre »
+   ------------------------------------------------------------
+   La page méthode reprend la mise en page des documents légaux
+   (legal.css : sommaire collant + colonne de lecture) : c'est un
+   document qu'on consulte par morceaux. Le baromètre reprend les
+   cellules à filets du chiffre de niche de l'accueil (index.css,
+   .niche-stats) : mêmes chiffres, même objet visuel.
+   Seul ce qui n'existe nulle part ailleurs vit ici.
+   ============================================================ */
+
+/* ── Méthode ────────────────────────────────────────────────── */
+
+/* Une formule : en mono, sur sa propre ligne, comme on l'écrirait au
+   tableau. Pas de rendu mathématique : il faudrait une bibliothèque
+   pour trois lignes. */
+.formula {
+  margin: 0.4rem 0 1.4rem;
+  padding: 0.85rem 1rem;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow-wrap: anywhere;
+}
+/* min-width: 0 : sans lui, une ligne insecable de l'article elargit la
+   colonne de la grille (et toute la page) sur mobile. */
+.legal-article { min-width: 0; }
+.formula span { color: var(--text-3); }
+
+/* Exemple chiffré : un tableau de trois lignes, lisible d'un coup. */
+.legal-table td.num { font-family: var(--mono); white-space: nowrap; }
+
+.doc-cta {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ── Baromètre ──────────────────────────────────────────────── */
+.baro-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text-3);
+}
+.baro-date::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Quatre chiffres au lieu de trois : la grille de l'accueil passe à 4. */
+.niche-stats--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.niche-stats--4 .niche-stat { padding: 1.4rem 1.35rem; }
+
+/* Une section du baromètre : un constat (gauche), sa preuve (droite). */
+.finding {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+.finding h2 { margin-bottom: 1rem; }
+.finding p { color: var(--text-2); line-height: 1.7; }
+.finding p + p { margin-top: 0.9rem; }
+.finding .takeaway {
+  margin-top: 1.25rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--accent);
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Barres horizontales d'une même échelle (0-100 %). On réutilise
+   .gaprow de index.css, avec une colonne de libellé plus large. */
+.bars-card {
+  padding: 1.35rem 1.4rem 1.2rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  background: hsl(0 0% 100% / 0.02);
+}
+.bars-card .panel-gap-title { margin-bottom: 1.1rem; }
+.bars-card .gaprow { grid-template-columns: minmax(0, 11.5rem) minmax(0, 1fr) auto; }
+/* Libelles longs (« Collaboration commerciale », « Font mieux (100 % et
+   plus) ») : ils passent a la ligne au lieu de deborder sur la barre. */
+.bars-card .gaprow-label { white-space: normal; line-height: 1.35; }
+.bars-card .gaprow-val { min-width: 4.2rem; }
+.bars-card .gaprow--muted .gaprow-track i { background: hsl(0 0% 100% / 0.28); }
+.bars-card .gaprow--muted .gaprow-val { color: var(--text-2); }
+.bars-note { margin-top: 1rem; font-size: 0.75rem; line-height: 1.6; color: var(--text-3); }
+
+/* Ce qu'il faut en retenir : trois cartes à filets, comme .perks. */
+.lessons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; list-style: none; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.4rem;
+  background: hsl(0 0% 100% / 0.015);
+}
+.lessons h3 { margin-bottom: 0.55rem; }
+.lessons p { font-size: 0.875rem; line-height: 1.65; color: var(--text-3); }
+
+/* Citer le baromètre : le texte exact à reprendre, avec un bouton qui
+   le copie. Le partage est le but de la page (synthèse concurrents). */
+.cite {
+  margin-top: 2rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+.cite p { font-size: 0.8125rem; line-height: 1.6; color: var(--text-2); max-width: 70ch; }
+.cite p b { color: var(--text); font-weight: 500; }
+.cite button { background: none; }
+
+.baro-method { max-width: 70ch; }
+.baro-method p, .baro-method li { font-size: 0.875rem; line-height: 1.7; color: var(--text-3); }
+.baro-method ul { padding-left: 1.1rem; margin-top: 0.8rem; display: grid; gap: 0.35rem; }
+.baro-method a { color: var(--accent-soft); text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 960px) {
+  .niche-stats--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .finding { grid-template-columns: 1fr; gap: 1.75rem; }
+  .lessons { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .niche-stats--4 { grid-template-columns: 1fr; }
+  .bars-card .gaprow { grid-template-columns: minmax(0, 8rem) minmax(0, 1fr) auto; }
+}
+
+/* Le titre du baromètre est une phrase longue : la mesure de 62ch
+   (en taille de texte courant) le cassait sur quatre lignes. */
+.baro-head { max-width: 50rem; }
