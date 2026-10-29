@@ -146,3 +146,11 @@
 /* Le titre du baromètre est une phrase longue : la mesure de 62ch
    (en taille de texte courant) le cassait sur quatre lignes. */
 .baro-head { max-width: 50rem; }
+
+/* Les boutons en bas de la page méthode héritaient du style des liens de
+   l'article (.legal-article a : texte violet souligné), illisible sur le
+   fond violet du bouton. On leur rend celui des boutons. */
+.legal-article a.btn { text-decoration: none; }
+.legal-article a.btn--primary { color: #fff; }
+.legal-article a.btn--ghost { color: var(--text-2); }
+.legal-article a.btn--ghost:hover { color: var(--text); }
