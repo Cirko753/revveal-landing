@@ -105,6 +105,25 @@
   </url>
 
   <url>
+    <loc>https://www.revveal.net/heepsy-alternative</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/heepsy-alternative"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/alternative-heepsy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/heepsy-alternative"/>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.revveal.net/fr/alternative-heepsy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/heepsy-alternative"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/alternative-heepsy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.revveal.net/heepsy-alternative"/>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://www.revveal.net/terms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.revveal.net/terms"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.revveal.net/fr/terms"/>

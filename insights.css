@@ -154,3 +154,22 @@
 .legal-article a.btn--primary { color: #fff; }
 .legal-article a.btn--ghost { color: var(--text-2); }
 .legal-article a.btn--ghost:hover { color: var(--text); }
+
+/* ── Pages « alternative à » ────────────────────────────────── */
+/* Tableau à trois colonnes : la première nomme la ligne, les deux
+   autres comparent. Sous 560px, legal.css empile les cellules et
+   masque l'en-tête : chaque cellule redit alors de quel outil elle
+   parle (attribut data-label). */
+.compare-table th:nth-child(2) { color: var(--accent); }
+@media (max-width: 560px) {
+  .compare-table td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: var(--mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+}
