@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pricing — Revveal</title>
-  <meta name="description" content="Revveal pricing: one payment per campaign. Starter 49€ (300 creators, 210 analyses), Growth 89€ (600, 420), Pro 139€ (1,000, 700). No subscription, no commission, free trial without a card." />
+  <title>Pricing: TikTok creator analytics from 49€ — Revveal</title>
+  <meta name="description" content="One payment per campaign: Starter 49€ (300 creators), Growth 89€ (600), Pro 139€ (1,000). No subscription, no commission, free trial without a card." />
   <meta name="theme-color" content="#1e2029" />
 
   <meta property="og:title" content="Pricing — Revveal" />
@@ -35,9 +35,62 @@
 
   <script>document.documentElement.classList.add('js');</script>
 
-  <!-- Pas de donnees structurees `offers` ici, pour la meme raison que sur
-       l'accueil : tant que l'inscription est fermee (auth-gate), le produit
-       ne s'achete pas, et une offre balisee serait fausse. -->
+  <!-- Les offres balisees reprennent EXACTEMENT les cartes de la page
+       (prix, createurs, analyses) : a modifier avec elles a chaque
+       changement de grille. L'inscription est ouverte depuis le 2026-10-14,
+       le produit s'achete : les offres sont vraies. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Revveal",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser",
+    "inLanguage": "en",
+    "url": "https://www.revveal.net/pricing",
+    "description": "TikTok creator analytics for beauty brands: finds the creators of a niche and measures the gap between their sponsored and organic posts.",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.revveal.net/#organization",
+      "name": "Revveal",
+      "url": "https://www.revveal.net/"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free trial",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "url": "https://www.revveal.net/pricing",
+        "description": "One free campaign per project: 15 creators found, 5 detailed analyses. No card."
+      },
+      {
+        "@type": "Offer",
+        "name": "Starter",
+        "price": "49",
+        "priceCurrency": "EUR",
+        "url": "https://www.revveal.net/pricing",
+        "description": "One payment per campaign: 300 creators found, 210 detailed analyses. No subscription."
+      },
+      {
+        "@type": "Offer",
+        "name": "Growth",
+        "price": "89",
+        "priceCurrency": "EUR",
+        "url": "https://www.revveal.net/pricing",
+        "description": "One payment per campaign: 600 creators found, 420 detailed analyses. No subscription."
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro",
+        "price": "139",
+        "priceCurrency": "EUR",
+        "url": "https://www.revveal.net/pricing",
+        "description": "One payment per campaign: 1,000 creators found, 700 detailed analyses. No subscription."
+      }
+    ]
+  }
+  </script>
 
   <link rel="stylesheet" href="./base.css" />
   <link rel="stylesheet" href="./index.css" />
