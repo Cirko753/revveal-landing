@@ -160,7 +160,9 @@
    autres comparent. Sous 560px, legal.css empile les cellules et
    masque l'en-tête : chaque cellule redit alors de quel outil elle
    parle (attribut data-label). */
-.compare-table th:nth-child(2) { color: var(--accent); }
+/* La 2e colonne est Revveal sur les pages « alternative à » ; pas sur la
+   grille des repères, où elle vaut « Faible ». */
+.compare-table:not(.bench-grid) th:nth-child(2) { color: var(--accent); }
 @media (max-width: 560px) {
   .compare-table td[data-label]::before {
     content: attr(data-label);
@@ -173,3 +175,41 @@
     color: var(--text-3);
   }
 }
+
+/* ── Repères de taux d'engagement ───────────────────────────── */
+/* Le calculateur reprend calculator.css (tableau de posts, panneau de
+   résultat). Seuls s'ajoutent le champ « abonnés », posé au-dessus du
+   tableau, et la barre « médiane de la tranche », grisée comme dans
+   les cartes du baromètre. */
+.eng-followers { display: grid; gap: 0.4rem; max-width: 15rem; }
+.eng-followers label {
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.eng-followers input {
+  width: 100%;
+  min-height: 40px;
+  padding: 0.45rem 0.6rem;
+  font: 500 0.875rem var(--mono);
+  color: var(--text);
+  background: var(--bg-deep);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  transition: border-color 0.15s ease;
+}
+.eng-followers input:hover { border-color: hsl(0 0% 100% / 0.28); }
+.eng-followers input:focus { outline: none; border-color: var(--accent); }
+.eng-followers input.is-bad { border-color: var(--bad); }
+
+.calc-result .gaprow--muted .gaprow-track i { background: hsl(0 0% 100% / 0.28); }
+.calc-result .gaprow--muted .gaprow-val { color: var(--text-2); }
+
+/* La grille de lecture : un tableau, pas des barres. C'est la réponse
+   directe à « qu'est-ce qu'un bon taux », et Google lit un tableau. */
+.bench-grid td { white-space: nowrap; }
+.bench-grid td:first-child { white-space: normal; }
+.bench-wrap > .bench-grid, .bench-wrap > .bars-note { max-width: 54rem; }
