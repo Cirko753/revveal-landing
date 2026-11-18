@@ -773,3 +773,6 @@
   /* Cible tactile de 44px (22px avant l'audit du 2026-10-13). */
   .plans-more { min-height: 44px; }
 }
+
+/* Boutons de la carte de fin : « Commencer » et le lien vers la demo YouTube */
+.closing-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
